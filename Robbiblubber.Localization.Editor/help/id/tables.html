@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tabel bahasa – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/tables.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/tables.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/tables.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html" class="current">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Tabel bahasa</h1>
+
+<p class="lead">Jendela tabel bahasa menampilkan bagian kepala tabel di atas dan entri-entrinya di bawahnya. Bilah status di bagian
+bawah menampilkan jumlah entri, jumlah masalah, dan nama berkas.</p>
+
+<h2>Bagian kepala</h2>
+
+<table>
+	<tr><th>Kolom</th><th>Arti</th></tr>
+	<tr><td><span class="ui">Kunci</span></td><td>Pengenal tabel, misalnya <code>lt.app</code>. Kunci ini tidak digunakan untuk
+		mencari teks.</td></tr>
+	<tr><td><span class="ui">Bahasa</span></td><td>Kunci bahasa yang memiliki teks-teks tersebut, misalnya <code>de</code> atau
+		<code>de-AT</code>. Tanpa bahasa, tabel tidak digunakan untuk bahasa apa pun.</td></tr>
+	<tr><td><span class="ui">Nama</span></td><td>Nama deskriptif, misalnya <code>app.de</code>.</td></tr>
+	<tr><td><span class="ui">Versi</span></td><td>Versi tabel, misalnya <code>1.0</code>.</td></tr>
+	<tr><td><span class="ui">Prefiks</span></td><td>Satu atau beberapa prefiks, dipisahkan dengan <code>;</code> atau
+		<code>,</code> (lihat <a href="concepts.html">Dasar-dasar</a>). Spasi diabaikan.</td></tr>
+	<tr><td><span class="ui">Penulis</span></td><td>Siapa yang membuat tabel.</td></tr>
+</table>
+
+<h2>Entri</h2>
+
+<p>Setiap baris tabel adalah satu entri dengan sebuah <span class="ui">Simbol</span> dan sebuah <span class="ui">Teks</span>.</p>
+
+<ul>
+	<li><strong>Menambah:</strong> ketik di baris terakhir yang kosong. Baris yang ditempel juga ditambahkan di sana (lihat
+		<a href="editing.html">Pengeditan dan papan klip</a>).</li>
+	<li><strong>Mengedit:</strong> pilih sebuah sel lalu mulai mengetik, tekan <kbd>F2</kbd>, atau klik sel saat ini sekali lagi.
+		Tekan <kbd>Enter</kbd> untuk menerapkan perubahan, <kbd>Esc</kbd> untuk membuangnya.</li>
+	<li><strong>Teks panjang:</strong> klik ganda sel teks atau tekan <kbd>Ctrl</kbd>+<kbd>E</kbd> untuk mengedit teks di
+		<a href="tools.html">editor teks</a>.</li>
+	<li><strong>Menghapus:</strong> pilih seluruh baris dengan mengklik kepala baris di sebelah kiri, lalu tekan
+		<kbd>Del</kbd>.</li>
+</ul>
+
+<p>Urutan baris tidak penting. Berkas selalu disimpan dalam urutan menurut simbol; <span class="menu">Alat › Urutkan</span>
+menampilkan baris dalam urutan ini.</p>
+
+<h2>Baris baru, tab, dan garis miring terbalik</h2>
+
+<p>Tabel menampilkan setiap teks dalam satu baris. Karakter khusus ditulis seperti ini:</p>
+
+<table>
+	<tr><th>Di dalam tabel</th><th>Arti</th></tr>
+	<tr><td><code>\n</code></td><td>Baris baru</td></tr>
+	<tr><td><code>\t</code></td><td>Tab</td></tr>
+	<tr><td><code>\\</code></td><td>Sebuah garis miring terbalik, di tempat yang jika tidak akan dibaca sebagai <code>\n</code>
+		atau <code>\t</code>, misalnya <code>C:\\neu</code> untuk <code>C:\neu</code>.</td></tr>
+</table>
+
+<p>Garis miring terbalik lainnya tetap seperti apa adanya: <code>C:\Data</code> tetap <code>C:\Data</code>. Di
+<a href="tools.html">editor teks</a>, Anda melihat dan memasukkan baris baru dan tab yang sebenarnya.</p>
+
+<h2>Masalah</h2>
+
+<p>Baris yang bermasalah mendapat tanda merah di kepala baris; arahkan penunjuk ke tanda tersebut untuk melihat apa yang salah.
+Bilah status menampilkan jumlah baris seperti itu.</p>
+
+<table>
+	<tr><th>Masalah</th><th>Apa yang terjadi</th></tr>
+	<tr><td>Teks tanpa simbol</td><td>Baris tidak disimpan.</td></tr>
+	<tr><td>Simbol muncul lebih dari sekali</td><td>Hanya baris terakhir dari baris-baris tersebut yang disimpan.</td></tr>
+	<tr><td>Simbol berisi prefiks (<code>:</code>)</td><td>Baris disimpan, tetapi aplikasi akan mencari
+		<code>app:app:...</code>. Hapus prefiks dari simbol.</td></tr>
+</table>
+
+<p>Saat Anda menyimpan tabel yang bermasalah, editor mencantumkan masalahnya dan menanyakan apakah tetap akan disimpan. Editor
+juga memperingatkan Anda jika kolom <span class="ui">Bahasa</span> kosong.</p>
+
+<h2>Menyimpan tabel</h2>
+
+<p>Untuk tabel baru, editor menyarankan nama berkas yang terdiri dari prefiks pertama dan bahasa, misalnya
+<code>app.de.ltab</code>. Di dialog Simpan, Anda dapat memilih <span class="ui">Tabel Bahasa Terkompresi</span> untuk menyimpan
+berkas <code>.cltab</code> sebagai gantinya.</p>
+			<div class="pager">
+				<a class="prev" href="windows.html"><small>Sebelumnya</small>Berkas dan jendela</a>
+				<a class="next" href="editing.html"><small>Berikutnya</small>Pengeditan dan papan klip</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

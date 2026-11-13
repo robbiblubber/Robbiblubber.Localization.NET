@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Editing and clipboard – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/editing.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/editing.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/editing.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html" class="current">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Editing and clipboard</h1>
+
+<p class="lead">The commands of the <span class="menu">Edit</span> menu work wherever you are: in a header field, in the table or
+in a cell you are editing.</p>
+
+<h2>Edit commands</h2>
+
+<table>
+	<tr><th>Command</th><th>Shortcut</th><th>In the table</th></tr>
+	<tr><td><span class="menu">Undo</span></td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>Only while editing a cell.</td></tr>
+	<tr><td><span class="menu">Cut</span></td><td><kbd>Ctrl</kbd>+<kbd>X</kbd></td><td>Copies the selected cells and clears
+		them.</td></tr>
+	<tr><td><span class="menu">Copy</span></td><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Copies the selected cells.</td></tr>
+	<tr><td><span class="menu">Paste</span></td><td><kbd>Ctrl</kbd>+<kbd>V</kbd></td><td>Pastes from the current cell on.</td></tr>
+	<tr><td><span class="menu">Delete</span></td><td><kbd>Del</kbd></td><td>Clears the selected cells, or removes the selected
+		rows.</td></tr>
+	<tr><td><span class="menu">Select All</span></td><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Selects all cells.</td></tr>
+</table>
+
+<p>The menu only enables the commands that are possible at the moment, for example <span class="menu">Paste</span> only if there
+is something on the clipboard.</p>
+
+<h2>Copying and pasting cells</h2>
+
+<ul>
+	<li>You can copy several cells at once. They are put on the clipboard as text with tabs between the columns and line breaks
+		between the rows, so you can paste them into Excel or a text editor.</li>
+	<li>Cells copied in Excel can be pasted into the table the same way. The pasted block starts at the current cell.</li>
+	<li>To add entries, copy whole rows (select the row headers), click a cell of the empty last row and paste. If you paste more
+		rows than there are below the current cell, the missing rows are added.</li>
+</ul>
+
+<h2>Context menus</h2>
+
+<p>Right-click a header field or a cell you are editing to get Undo, Cut, Copy, Paste, Delete and Select All for that field.
+Right-click the table to get the same commands for the selected cells, and the <span class="menu">Text Editor</span>.</p>
+
+<p>If you right-click a cell outside the selection, that cell is selected first. If you right-click inside a selection, the
+selection stays, so the command applies to all selected cells or rows.</p>
+
+<h2>Undo</h2>
+
+<div class="warn">
+	<p>Changes to the table itself, such as pasting, deleting rows or <span class="ui">Replace All</span>, cannot be undone yet.
+	<span class="menu">Undo</span> only works in text fields and while you are editing a cell. If you are about to make large
+	changes, save the file first, so you can go back by opening it again.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tables.html"><small>Previous</small>Language tables</a>
+				<a class="next" href="find.html"><small>Next</small>Find and replace</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

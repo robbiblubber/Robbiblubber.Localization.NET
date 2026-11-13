@@ -1,0 +1,30 @@
+﻿cid = lang.def;
+version = 3.0;
+
+header
+{
+    author = robbiblubber.org;
+    key = lt.spellbook.colordialog;
+    lang = de;
+    name = spellbook.colordialog.de;
+    prefixes = spellbook;
+    version = 1.0;
+}
+
+data
+{
+    colordialog.addcustomcolor = Zu benutzerdefinierten Farben &hinzufügen;
+    colordialog.alpha = Al&pha:;
+    colordialog.basiccolors = Gr&undfarben:;
+    colordialog.blue = &Blau:;
+    colordialog.cancel = Abbrechen;
+    colordialog.customcolors = Benut&zerdefinierte Farben:;
+    colordialog.green = &Grün:;
+    colordialog.hex = He&x:;
+    colordialog.hue = Farb&ton:;
+    colordialog.ok = OK;
+    colordialog.red = &Rot:;
+    colordialog.saturation = &Sätt.:;
+    colordialog.title = Farbe;
+    colordialog.value = Hell&wert:;
+}

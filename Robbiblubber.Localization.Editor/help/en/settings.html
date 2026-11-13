@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Settings – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/settings.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/settings.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/settings.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html" class="current">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Settings</h1>
+
+<p class="lead"><span class="menu">Tools › Settings...</span> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>) opens the settings of
+the editor.</p>
+
+<h2>Language of the editor</h2>
+
+<p>Under <span class="ui">Environment › Languages</span>, choose the <span class="ui">User Interface Language</span>. All windows
+switch at once, so you can see the result right away. <span class="ui">OK</span> keeps the new language;
+<span class="ui">Cancel</span> or <kbd>Esc</kbd> returns to the previous one. The editor remembers your choice.</p>
+
+<p>The editor comes with English, Deutsch, Français and Bahasa Indonesia.</p>
+
+<h2>Adding a language to the editor</h2>
+
+<p>The editor is localized with its own files, so you can translate it yourself:</p>
+
+<ol>
+	<li>Create a locale definition for the language, for example <code>es.locale</code>.</li>
+	<li>Open the English table of the editor, <code>led.en.ltab</code> in the folder <code>locale</code> next to
+		<code>led.exe</code>, save it as <code>led.es.ltab</code>, set its <span class="ui">Locale</span> to <code>es</code> and
+		translate the texts.</li>
+	<li>Put both files into the folder <code>locale</code> next to <code>led.exe</code> and restart the editor.</li>
+</ol>
+
+<p>The new language then appears in the settings. Texts that are missing in your table are shown in English.</p>
+
+<h2>Appearance</h2>
+
+<p>Under <span class="ui">Environment › Appearance</span>, choose the <span class="ui">Theme</span> of the editor. Like the
+language, the theme changes all windows at once; <span class="ui">OK</span> keeps it, <span class="ui">Cancel</span> returns to
+the previous one.</p>
+
+<table>
+	<tr><th>Theme</th><th>Colors</th></tr>
+	<tr><td><span class="ui">Automatic</span></td><td>Light or dark, as set for apps in the Windows settings; with high contrast,
+		the Windows colors</td></tr>
+	<tr><td><span class="ui">System</span></td><td>The Windows colors, as without a theme</td></tr>
+	<tr><td><span class="ui">Light</span></td><td>Light colors</td></tr>
+	<tr><td><span class="ui">Dark</span></td><td>Dark colors</td></tr>
+</table>
+
+<p>Your own themes follow the built-in themes in the list.</p>
+
+<h3>Your own themes</h3>
+
+<p>The link <span class="ui">Customize...</span> next to the list opens the theme editor. Create a theme with
+<span class="ui">New</span> or <span class="ui">Copy</span>. Every theme is <span class="ui">Based on</span> another theme and only
+changes the colors you set: select a color and click <span class="ui">Change...</span>; <span class="ui">Reset color</span>
+takes the color of the base theme again. The preview shows the result right away. <span class="ui">Import...</span> and
+<span class="ui">Export...</span> exchange themes as <code>.theme</code> files, <span class="ui">Remove</span> deletes a theme.
+The built-in themes cannot be changed.</p>
+
+<p>When you close the theme editor with <span class="ui">OK</span>, the theme selected there becomes the theme of the editor, and
+your themes are saved at once, even if you close the settings with <span class="ui">Cancel</span> afterwards.</p>
+
+<div class="note">
+	<p>Your themes are kept in <code>%APPDATA%\robbiblubber\themes</code>. Other applications of robbiblubber.org that support themes
+	use the same folder, so a theme you create here is available there too, and the other way round. Each application keeps its
+	own choice of theme.</p>
+</div>
+
+<h2>Stored settings</h2>
+
+<p>The editor keeps its settings for each user in <code>%LOCALAPPDATA%\robbiblubber.org\led</code>:</p>
+
+<table>
+	<tr><th>File</th><th>Content</th></tr>
+	<tr><td><code>led.settings</code></td><td>Language of the editor, search history and search options</td></tr>
+	<tr><td><code>led.recent</code></td><td>The list of recent files</td></tr>
+	<tr><td><code>led.layout</code></td><td>Positions and sizes of the windows and widths of the table columns</td></tr>
+	<tr><td><code>led.themes</code></td><td>The theme of the editor</td></tr>
+</table>
+
+<div class="tip">
+	<p>If a window opens in an unexpected place, close the editor and delete <code>led.layout</code>. All windows then open at
+	their default positions again.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="definitions.html"><small>Previous</small>Locale definitions</a>
+				<a class="next" href="shortcuts.html"><small>Next</small>Keyboard shortcuts</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

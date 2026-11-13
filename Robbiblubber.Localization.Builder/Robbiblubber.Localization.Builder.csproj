@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <AssemblyName>bloc</AssemblyName>
+    <ApplicationIcon>grinder2.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Robbiblubber.Localization\Properties\AssemblyVersion.cs" Link="Properties\AssemblyVersion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="grinder2.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook\Robbiblubber.Spellbook.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization\Robbiblubber.Localization.csproj" />
+  </ItemGroup>
+
+</Project>

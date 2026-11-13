@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Files and windows – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/windows.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/windows.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/windows.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html" class="current">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Files and windows</h1>
+
+<p class="lead">Every file has its own window. All windows belong to one running editor, share the menus and the list of recent
+files, and can be arranged side by side.</p>
+
+<h2>Creating files</h2>
+
+<ul>
+	<li><span class="menu">File › New › Table</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>) opens a new window with an empty language
+		table.</li>
+	<li><span class="menu">File › New › Definition</span> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>) opens a new window with
+		an empty locale definition.</li>
+</ul>
+
+<h2>Opening files</h2>
+
+<p><span class="menu">File › Open...</span> (<kbd>Ctrl</kbd>+<kbd>O</kbd>) opens one or more files; you can select several in the
+dialog. The editor recognizes language tables and locale definitions by their content, not by their file name.</p>
+
+<ul>
+	<li>If the current window contains a new, unchanged document of the same kind, the file replaces it; otherwise a new window
+		opens.</li>
+	<li>If the file is already open, its window comes to the front and shows the file as it is on disk. If you have changed it
+		there, the editor first asks whether to discard your changes.</li>
+	<li>You can also open files by passing them to <code>led.exe</code>, for example by dragging them onto it in Explorer or by
+		starting <code>led app.de.ltab</code> in a command prompt. If the editor is already running, the files open in the
+		running editor.</li>
+	<li>If a file contains the same entry more than once, the editor shows a warning with the affected symbols. Only the last
+		value of each is shown and saved again.</li>
+</ul>
+
+<h2>Saving</h2>
+
+<ul>
+	<li><span class="menu">File › Save</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) saves the file. A new file is saved with
+		<span class="menu">Save As</span>.</li>
+	<li><span class="menu">File › Save As...</span> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>) saves under a new name. For
+		language tables you can choose between a normal (<code>.ltab</code>) and a compressed table (<code>.cltab</code>).</li>
+	<li>Before saving, the editor checks the document and lists any problems, for example a missing locale or duplicate symbols.
+		You can save anyway or cancel and correct them first.</li>
+	<li>A file that is open in another window cannot be saved over; close it there first.</li>
+</ul>
+
+<h2>Unsaved changes</h2>
+
+<p>A <code>*</code> after the file name in the title bar and in the <span class="menu">Window</span> menu shows that the document
+has unsaved changes. If you change something back to the saved state, the <code>*</code> disappears again. When you close a
+window with unsaved changes, the editor asks whether to save them.</p>
+
+<h2>Closing</h2>
+
+<p><span class="menu">File › Close</span> (<kbd>Ctrl</kbd>+<kbd>W</kbd>) closes the current window. The editor ends when its last
+window is closed; there is no separate Exit command.</p>
+
+<h2>Recent files</h2>
+
+<p><span class="menu">File › Recent Files</span> lists the last files you opened or saved, the most recent first. Right-click an
+entry to open it, pin it or remove it from the list; <span class="ui">Clear List</span> removes all entries that are not pinned.
+Pinned files stay at the top and never drop out of the list. If a file no longer exists, the editor offers to remove it from the
+list.</p>
+
+<h2>The Window menu</h2>
+
+<p>The <span class="menu">Window</span> menu lists all open windows. The current one is checked; select another to bring it to
+the front.</p>
+
+<h2>Window positions</h2>
+
+<p>The editor remembers the position and size of its windows, and the width of the table columns. Tables and locale definitions
+each have their own position. A new window opened from a window of the same kind is placed slightly offset, so it does not cover
+the other one exactly.</p>
+			<div class="pager">
+				<a class="prev" href="concepts.html"><small>Previous</small>Basics</a>
+				<a class="next" href="tables.html"><small>Next</small>Language tables</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

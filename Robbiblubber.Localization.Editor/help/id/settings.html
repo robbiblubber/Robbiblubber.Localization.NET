@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pengaturan – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/settings.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/settings.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/settings.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html" class="current">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Pengaturan</h1>
+
+<p class="lead"><span class="menu">Alat › Pengaturan...</span> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>) membuka pengaturan
+editor.</p>
+
+<h2>Bahasa editor</h2>
+
+<p>Di <span class="ui">Lingkungan › Bahasa</span>, pilih <span class="ui">Bahasa Antarmuka</span>. Semua jendela langsung beralih,
+sehingga Anda dapat segera melihat hasilnya. <span class="ui">OK</span> mempertahankan bahasa baru;
+<span class="ui">Batal</span> atau <kbd>Esc</kbd> kembali ke bahasa sebelumnya. Editor mengingat pilihan Anda.</p>
+
+<p>Editor tersedia dalam English, Deutsch, Français, dan Bahasa Indonesia.</p>
+
+<h2>Menambahkan bahasa ke editor</h2>
+
+<p>Editor dilokalkan dengan berkasnya sendiri, sehingga Anda dapat menerjemahkannya sendiri:</p>
+
+<ol>
+	<li>Buat definisi bahasa untuk bahasa tersebut, misalnya <code>es.locale</code>.</li>
+	<li>Buka tabel bahasa Inggris milik editor, <code>led.en.ltab</code>, di folder <code>locale</code> di samping
+		<code>led.exe</code>, simpan sebagai <code>led.es.ltab</code>, atur <span class="ui">Bahasa</span>-nya ke <code>es</code>,
+		lalu terjemahkan teksnya.</li>
+	<li>Letakkan kedua berkas ke dalam folder <code>locale</code> di samping <code>led.exe</code>, lalu mulai ulang
+		editor.</li>
+</ol>
+
+<p>Bahasa baru kemudian muncul di pengaturan. Teks yang tidak ada di tabel Anda ditampilkan dalam bahasa Inggris.</p>
+
+<h2>Tampilan</h2>
+
+<p>Di <span class="ui">Lingkungan › Tampilan</span>, pilih <span class="ui">Tema</span> editor. Sama seperti bahasa, semua jendela
+langsung berganti; <span class="ui">OK</span> mempertahankan tema, <span class="ui">Batal</span> kembali ke tema sebelumnya.</p>
+
+<table>
+	<tr><th>Tema</th><th>Warna</th></tr>
+	<tr><td><span class="ui">Otomatis</span></td><td>Terang atau gelap, sesuai pengaturan aplikasi di pengaturan Windows; dengan
+		kontras tinggi, warna Windows</td></tr>
+	<tr><td><span class="ui">Sistem</span></td><td>Warna Windows, seperti tanpa tema</td></tr>
+	<tr><td><span class="ui">Terang</span></td><td>Warna terang</td></tr>
+	<tr><td><span class="ui">Gelap</span></td><td>Warna gelap</td></tr>
+</table>
+
+<p>Tema Anda sendiri muncul setelah tema bawaan di daftar.</p>
+
+<h3>Tema Anda sendiri</h3>
+
+<p>Tautan <span class="ui">Sesuaikan...</span> di samping daftar membuka editor tema. Buat tema dengan <span class="ui">Baru</span>
+atau <span class="ui">Salin</span>. Setiap tema <span class="ui">Berdasarkan</span> tema lain dan hanya mengubah warna yang Anda
+atur: pilih sebuah warna lalu klik <span class="ui">Ubah...</span>; <span class="ui">Kembalikan warna</span> memakai lagi warna
+tema dasar. Pratinjau langsung menampilkan hasilnya. <span class="ui">Impor...</span> dan <span class="ui">Ekspor...</span>
+bertukar tema sebagai berkas <code>.theme</code>, <span class="ui">Hapus</span> menghapus tema. Tema bawaan tidak dapat
+diubah.</p>
+
+<p>Jika Anda menutup editor tema dengan <span class="ui">OK</span>, tema yang dipilih di sana menjadi tema editor, dan tema Anda
+langsung disimpan, meskipun setelah itu Anda menutup pengaturan dengan <span class="ui">Batal</span>.</p>
+
+<div class="note">
+	<p>Tema Anda disimpan di <code>%APPDATA%\robbiblubber\themes</code>. Aplikasi lain dari robbiblubber.org yang mendukung tema
+	memakai folder yang sama, sehingga tema yang Anda buat di sini juga tersedia di sana, dan sebaliknya. Setiap aplikasi
+	mengingat pilihan temanya sendiri.</p>
+</div>
+
+<h2>Pengaturan yang disimpan</h2>
+
+<p>Editor menyimpan pengaturannya untuk setiap pengguna di <code>%LOCALAPPDATA%\robbiblubber.org\led</code>:</p>
+
+<table>
+	<tr><th>Berkas</th><th>Isi</th></tr>
+	<tr><td><code>led.settings</code></td><td>Bahasa editor, riwayat pencarian, dan opsi pencarian</td></tr>
+	<tr><td><code>led.recent</code></td><td>Daftar berkas terakhir</td></tr>
+	<tr><td><code>led.layout</code></td><td>Posisi dan ukuran jendela serta lebar kolom tabel</td></tr>
+	<tr><td><code>led.themes</code></td><td>Tema editor</td></tr>
+</table>
+
+<div class="tip">
+	<p>Jika sebuah jendela terbuka di tempat yang tidak terduga, tutup editor dan hapus <code>led.layout</code>. Semua jendela
+	kemudian akan terbuka lagi di posisi bawaannya.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="definitions.html"><small>Sebelumnya</small>Definisi bahasa</a>
+				<a class="next" href="shortcuts.html"><small>Berikutnya</small>Pintasan keyboard</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

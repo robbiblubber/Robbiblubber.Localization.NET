@@ -1,0 +1,21 @@
+﻿cid = lang.def;
+version = 3.0;
+
+header
+{
+    author = robbiblubber.org;
+    key = lt.spellbook.themeselector;
+    lang = id;
+    name = spellbook.themeselector.id;
+    prefixes = spellbook;
+    version = 1.0;
+}
+
+data
+{
+    themeselector.automatic = Otomatis;
+    themeselector.customize = Sesuaikan...;
+    themeselector.dark = Gelap;
+    themeselector.light = Terang;
+    themeselector.system = Sistem;
+}

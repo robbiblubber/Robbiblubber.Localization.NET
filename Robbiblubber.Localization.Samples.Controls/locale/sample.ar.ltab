@@ -1,0 +1,38 @@
+﻿cid = lang.def;
+version = 3.0;
+
+data
+{
+    button.send = إرسال;
+    button.send.tip = يرسل النموذج.;
+    check.newsletter = الاشتراك في النشرة;
+    color.blue = أزرق;
+    color.green = أخضر;
+    color.red = أحمر;
+    column.price = السعر;
+    column.product = المنتج;
+    group.controls = عناصر مترجمة;
+    label.locale = اللغة:;
+    label.name = الاسم:;
+    menu.file = ملف;
+    menu.file.exit = خروج;
+    menu.help = مساعدة;
+    node.carrot = جزر;
+    node.fruit = فواكه;
+    node.vegetables = خضروات;
+    product.apple = تفاحة;
+    product.pear = إجاصة;
+    title = مثال عناصر التوطين;
+    tool.open = فتح;
+    tool.save = حفظ;
+}
+
+header
+{
+    author = robbiblubber.org;
+    key = sample.ar;
+    lang = ar;
+    name = Sample (ar);
+    prefixes = sample;
+    version = 1.0;
+}

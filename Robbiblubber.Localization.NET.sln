@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11903.348
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robbiblubber.Localization", "Robbiblubber.Localization\Robbiblubber.Localization.csproj", "{2F76D57E-8A39-46D1-BF90-716E52E97419}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Robbiblubber.Spellbook.NET", "Robbiblubber.Spellbook.NET", "{5F735F09-C456-4842-B51E-8A762BF42B20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robbiblubber.Spellbook", "..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook\Robbiblubber.Spellbook.csproj", "{7C16A2EC-C642-48C7-BDF9-224A2839DF6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Robbiblubber.Spellbook.Controls", "..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook.Controls\Robbiblubber.Spellbook.Controls.csproj", "{AACC7988-CA0D-44C1-983E-DD1D7B4361E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbiblubber.Localization.UnitTests", "Robbiblubber.Localization.UnitTests\Robbiblubber.Localization.UnitTests.csproj", "{E0F5A782-DE8E-565B-120D-7F66A8BE63AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbiblubber.Localization.Controls", "Robbiblubber.Localization.Controls\Robbiblubber.Localization.Controls.csproj", "{B5B3347B-3AFE-BB44-1AF8-AB57A368DBE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbiblubber.Localization.Samples.Controls", "Robbiblubber.Localization.Samples.Controls\Robbiblubber.Localization.Samples.Controls.csproj", "{37896A97-01DA-BA8A-8FA2-36A7D4757A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbiblubber.Localization.Builder", "Robbiblubber.Localization.Builder\Robbiblubber.Localization.Builder.csproj", "{9EF26166-BB9B-3350-BEA2-64AAD4A78008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robbiblubber.Localization.Editor", "Robbiblubber.Localization.Editor\Robbiblubber.Localization.Editor.csproj", "{FE51A17B-2355-38BB-8B15-667410ED7AEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F76D57E-8A39-46D1-BF90-716E52E97419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F76D57E-8A39-46D1-BF90-716E52E97419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F76D57E-8A39-46D1-BF90-716E52E97419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F76D57E-8A39-46D1-BF90-716E52E97419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C16A2EC-C642-48C7-BDF9-224A2839DF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C16A2EC-C642-48C7-BDF9-224A2839DF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C16A2EC-C642-48C7-BDF9-224A2839DF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C16A2EC-C642-48C7-BDF9-224A2839DF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AACC7988-CA0D-44C1-983E-DD1D7B4361E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AACC7988-CA0D-44C1-983E-DD1D7B4361E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AACC7988-CA0D-44C1-983E-DD1D7B4361E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AACC7988-CA0D-44C1-983E-DD1D7B4361E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F5A782-DE8E-565B-120D-7F66A8BE63AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F5A782-DE8E-565B-120D-7F66A8BE63AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F5A782-DE8E-565B-120D-7F66A8BE63AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F5A782-DE8E-565B-120D-7F66A8BE63AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5B3347B-3AFE-BB44-1AF8-AB57A368DBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5B3347B-3AFE-BB44-1AF8-AB57A368DBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5B3347B-3AFE-BB44-1AF8-AB57A368DBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5B3347B-3AFE-BB44-1AF8-AB57A368DBE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37896A97-01DA-BA8A-8FA2-36A7D4757A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37896A97-01DA-BA8A-8FA2-36A7D4757A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37896A97-01DA-BA8A-8FA2-36A7D4757A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37896A97-01DA-BA8A-8FA2-36A7D4757A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF26166-BB9B-3350-BEA2-64AAD4A78008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF26166-BB9B-3350-BEA2-64AAD4A78008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF26166-BB9B-3350-BEA2-64AAD4A78008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF26166-BB9B-3350-BEA2-64AAD4A78008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE51A17B-2355-38BB-8B15-667410ED7AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE51A17B-2355-38BB-8B15-667410ED7AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE51A17B-2355-38BB-8B15-667410ED7AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE51A17B-2355-38BB-8B15-667410ED7AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C16A2EC-C642-48C7-BDF9-224A2839DF6D} = {5F735F09-C456-4842-B51E-8A762BF42B20}
+		{AACC7988-CA0D-44C1-983E-DD1D7B4361E8} = {5F735F09-C456-4842-B51E-8A762BF42B20}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3446B9F5-884A-4C79-88AC-534E3D8CDB8F}
+	EndGlobalSection
+EndGlobal

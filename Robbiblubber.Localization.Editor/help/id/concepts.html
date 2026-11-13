@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dasar-dasar – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/concepts.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/concepts.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/concepts.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html" class="current">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Dasar-dasar</h1>
+
+<p class="lead">Halaman ini menjelaskan bagaimana sebuah aplikasi menemukan teks-teksnya dan apa artinya bagi berkas yang Anda
+edit.</p>
+
+<h2>Bahasa</h2>
+
+<p>Sebuah <strong>bahasa</strong> (locale) adalah suatu bahasa, bisa juga untuk wilayah tertentu. Setiap bahasa memiliki
+<strong>kunci</strong> yang singkat, misalnya <code>en</code> untuk bahasa Inggris, <code>de</code> untuk bahasa Jerman, atau
+<code>de-AT</code> untuk bahasa Jerman di Austria. Sebuah <strong>definisi bahasa</strong> (<code>.locale</code>) menjelaskan
+sebuah bahasa: kuncinya, namanya sebagaimana ditampilkan kepada pengguna, ikonnya, dan beberapa pengaturan. Lihat
+<a href="definitions.html">Definisi bahasa</a>.</p>
+
+<p>Sebuah bahasa dapat memiliki <strong>bahasa dasar</strong>. Bahasa <code>de-AT</code> yang berdasarkan <code>de</code> hanya
+memerlukan teks yang berbeda di Austria; semua teks lainnya diambil dari <code>de</code>.</p>
+
+<h2>Tabel bahasa</h2>
+
+<p>Sebuah <strong>tabel bahasa</strong> (<code>.ltab</code> atau <code>.cltab</code>) berisi teks-teks satu bahasa untuk sebuah
+aplikasi atau sebagian darinya. Kolom <span class="ui">Bahasa</span> di bagian kepala tabel menunjukkan bahasa mana yang memiliki
+teks-teks tersebut. Sebuah aplikasi biasanya memiliki satu tabel per bahasa, misalnya <code>app.en.ltab</code>,
+<code>app.de.ltab</code>, dan <code>app.fr.ltab</code>, masing-masing dengan simbol yang sama.</p>
+
+<h2>Simbol dan teks</h2>
+
+<p>Setiap entri dalam tabel memiliki sebuah <strong>simbol</strong> dan sebuah <strong>teks</strong>. Simbol adalah nama yang
+digunakan aplikasi untuk meminta sebuah teks; simbol sama di semua bahasa. Teks adalah terjemahannya. Simbol biasanya terdiri dari
+kata-kata yang dipisahkan titik, misalnya <code>menu.file.open</code> atau <code>message.saved</code>. Huruf besar dan kecil
+dibedakan: <code>Save</code> dan <code>save</code> adalah dua simbol yang berbeda.</p>
+
+<h2>Prefiks</h2>
+
+<p><strong>Prefiks</strong> memisahkan simbol-simbol dari aplikasi atau komponen yang berbeda. Aplikasi meminta sebuah teks
+sebagai <code>prefix:symbol</code>, misalnya <code>app:menu.file.open</code>. Di dalam tabel, Anda hanya memasukkan simbolnya
+(<code>menu.file.open</code>), dan prefiksnya cukup sekali di bagian kepala. Tabel dengan beberapa prefiks menyediakan
+simbol-simbolnya di bawah masing-masing prefiks; tabel tanpa prefiks menyediakannya apa adanya.</p>
+
+<div class="note">
+	<p>Jangan menulis prefiks di depan simbol di dalam tabel. Editor menandai baris seperti itu sebagai masalah, karena tabel sudah
+	menambahkan prefiksnya sendiri di depannya.</p>
+</div>
+
+<h2>Placeholder</h2>
+
+<p>Teks dapat berisi placeholder: sebuah <code>$</code> diikuti nama dalam huruf kapital, misalnya <code>$NAME</code> dalam
+<code>$NAME has been saved.</code> Aplikasi menggantinya dengan sebuah nilai. Biarkan placeholder tidak berubah saat Anda
+menerjemahkan teks; Anda boleh memindahkannya ke posisi lain dalam kalimat.</p>
+
+<h2>Tombol akses</h2>
+
+<p>Dalam teks untuk menu, tombol, dan label, sebuah <code>&amp;</code> menandai huruf yang digarisbawahi dan dapat digunakan
+bersama <kbd>Alt</kbd>, misalnya <code>&amp;Open...</code>. Dalam satu menu atau jendela, setiap huruf sebaiknya hanya digunakan
+sekali. Untuk menampilkan <code>&amp;</code> itu sendiri, tulis <code>&amp;&amp;</code>.</p>
+
+<h2>Apa yang terjadi jika sebuah teks tidak ada</h2>
+
+<p>Jika tabel bahasa yang sedang digunakan tidak berisi sebuah simbol, aplikasi menggunakan teks dari bahasa dasar atau teks yang
+sudah tertanam di dalam aplikasi, biasanya teks bahasa Inggris. Karena itu, entri yang tidak ada tidak menyebabkan galat, tetapi
+pengguna melihat teks yang belum diterjemahkan.</p>
+
+<p>Jika simbol yang sama muncul dua kali untuk bahasa yang sama, yang terakhir yang berlaku. Editor memperingatkan Anda tentang
+duplikat seperti itu, baik di dalam tabel maupun saat membuka berkas.</p>
+			<div class="pager">
+				<a class="prev" href="index.html"><small>Sebelumnya</small>Mulai</a>
+				<a class="next" href="windows.html"><small>Berikutnya</small>Berkas dan jendela</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

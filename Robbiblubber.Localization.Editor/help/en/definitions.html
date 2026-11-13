@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Locale definitions – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/definitions.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/definitions.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/definitions.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html" class="current">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Locale definitions</h1>
+
+<p class="lead">A locale definition (<code>.locale</code>) describes a language: its key, its name, its base locale and the icons
+shown when the user chooses a language. Create one with <span class="menu">File › New › Definition</span>
+(<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>).</p>
+
+<h2>Fields</h2>
+
+<table>
+	<tr><th>Field</th><th>Meaning</th></tr>
+	<tr><td><span class="ui">Key</span></td><td>The short key of the locale, for example <code>de</code> or <code>de-AT</code>. It
+		must not contain blanks. Language tables refer to the locale by this key.</td></tr>
+	<tr><td><span class="ui">Base key</span></td><td>The key of the base locale, for example <code>de</code> for
+		<code>de-AT</code>. Texts the locale does not define are taken from there. Choose one from the list or type any key; leave
+		it empty for a locale without base.</td></tr>
+	<tr><td><span class="ui">Name</span></td><td>The name shown to the user, usually in the language itself, for example
+		<code>Deutsch</code>. If it is empty, the key is used.</td></tr>
+	<tr><td><span class="ui">Default locale</span></td><td>The application uses this locale if no other has been chosen.</td></tr>
+	<tr><td><span class="ui">Right to left</span></td><td>The language is written from right to left, for example Arabic or
+		Hebrew.</td></tr>
+</table>
+
+<p>Problems such as a key with blanks or a base key equal to the key are shown in red in the status bar.</p>
+
+<h2>Icons</h2>
+
+<p>A locale has a <span class="ui">Small icon</span> of 16 × 16 pixels, shown in lists and menus, and a
+<span class="ui">Large icon</span> of 32 × 32 pixels, used at higher display scaling. Next to each icon you see its real size;
+the editor points out unusual sizes. Image files are saved unchanged; pasted images are stored as PNG.</p>
+
+<p>To set an icon:</p>
+
+<ul>
+	<li>double-click the icon box or choose <span class="ui">Load...</span> in its context menu and select an image file;</li>
+	<li>drag an image file from Explorer onto the box; or</li>
+	<li>click the box and paste (<kbd>Ctrl</kbd>+<kbd>V</kbd>) an image copied in another program, or an image file copied in
+		Explorer.</li>
+</ul>
+
+<p>A selected icon box also supports Copy, Cut and Delete, through the <span class="menu">Edit</span> menu, the context menu or
+the shortcuts. Copy the small icon and paste it into the large box to use the same picture for both.</p>
+
+<h2>Saving</h2>
+
+<p>A definition can only be saved with a valid key. If an icon is missing, the editor warns you: without small icon, the language
+selection shows a placeholder; without large icon, the small one is used instead. For a new definition, the editor suggests
+<code>&lt;key&gt;.locale</code> as file name.</p>
+
+<div class="tip">
+	<p>An application finds its locales in the same places as its language tables. To offer a new language, provide the
+	<code>.locale</code> file together with the language tables for it.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tools.html"><small>Previous</small>Tools</a>
+				<a class="next" href="settings.html"><small>Next</small>Settings</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

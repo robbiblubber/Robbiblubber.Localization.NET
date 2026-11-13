@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Berkas dan jendela – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/windows.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/windows.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/windows.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html" class="current">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Berkas dan jendela</h1>
+
+<p class="lead">Setiap berkas memiliki jendelanya sendiri. Semua jendela termasuk dalam satu editor yang sedang berjalan, berbagi
+menu dan daftar berkas terakhir, serta dapat diatur berdampingan.</p>
+
+<h2>Membuat berkas</h2>
+
+<ul>
+	<li><span class="menu">Berkas › Baru › Tabel</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>) membuka jendela baru dengan tabel bahasa
+		yang kosong.</li>
+	<li><span class="menu">Berkas › Baru › Definisi</span> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>) membuka jendela baru
+		dengan definisi bahasa yang kosong.</li>
+</ul>
+
+<h2>Membuka berkas</h2>
+
+<p><span class="menu">Berkas › Buka...</span> (<kbd>Ctrl</kbd>+<kbd>O</kbd>) membuka satu atau beberapa berkas; Anda dapat memilih
+beberapa sekaligus di dialog. Editor mengenali tabel bahasa dan definisi bahasa dari isinya, bukan dari nama berkasnya.</p>
+
+<ul>
+	<li>Jika jendela saat ini berisi dokumen baru yang belum diubah dan berjenis sama, berkas tersebut menggantikannya; jika tidak,
+		jendela baru akan terbuka.</li>
+	<li>Jika berkas sudah terbuka, jendelanya akan tampil di depan dan menampilkan berkas sebagaimana tersimpan di disk. Jika Anda
+		telah mengubahnya di sana, editor terlebih dahulu menanyakan apakah perubahan Anda akan dibuang.</li>
+	<li>Anda juga dapat membuka berkas dengan meneruskannya ke <code>led.exe</code>, misalnya dengan menyeretnya ke atasnya di
+		Explorer atau dengan menjalankan <code>led app.de.ltab</code> di command prompt. Jika editor sudah berjalan, berkas akan
+		terbuka di editor yang sedang berjalan tersebut.</li>
+	<li>Jika sebuah berkas berisi entri yang sama lebih dari sekali, editor menampilkan peringatan beserta simbol-simbol yang
+		terkena. Hanya nilai terakhir dari masing-masing yang ditampilkan dan disimpan kembali.</li>
+</ul>
+
+<h2>Menyimpan</h2>
+
+<ul>
+	<li><span class="menu">Berkas › Simpan</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) menyimpan berkas. Berkas baru disimpan dengan
+		<span class="menu">Simpan Sebagai</span>.</li>
+	<li><span class="menu">Berkas › Simpan Sebagai...</span> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>) menyimpan dengan nama
+		baru. Untuk tabel bahasa, Anda dapat memilih antara tabel biasa (<code>.ltab</code>) dan tabel terkompresi
+		(<code>.cltab</code>).</li>
+	<li>Sebelum menyimpan, editor memeriksa dokumen dan mencantumkan masalah yang ada, misalnya bahasa yang belum ditentukan atau
+		simbol ganda. Anda dapat tetap menyimpan, atau membatalkan dan memperbaikinya terlebih dahulu.</li>
+	<li>Berkas yang sedang terbuka di jendela lain tidak dapat ditimpa; tutup terlebih dahulu di sana.</li>
+</ul>
+
+<h2>Perubahan yang belum disimpan</h2>
+
+<p>Tanda <code>*</code> setelah nama berkas di bilah judul dan di menu <span class="menu">Jendela</span> menunjukkan bahwa dokumen
+memiliki perubahan yang belum disimpan. Jika Anda mengembalikan sesuatu ke keadaan saat disimpan, tanda <code>*</code> hilang
+lagi. Saat Anda menutup jendela yang memiliki perubahan yang belum disimpan, editor menanyakan apakah perubahan tersebut akan
+disimpan.</p>
+
+<h2>Menutup</h2>
+
+<p><span class="menu">Berkas › Tutup</span> (<kbd>Ctrl</kbd>+<kbd>W</kbd>) menutup jendela saat ini. Editor berhenti saat jendela
+terakhirnya ditutup; tidak ada perintah Keluar tersendiri.</p>
+
+<h2>Berkas terakhir</h2>
+
+<p><span class="menu">Berkas › Berkas Terakhir</span> mencantumkan berkas terakhir yang Anda buka atau simpan, yang terbaru di
+urutan pertama. Klik kanan sebuah entri untuk membukanya, menyematkannya, atau menghapusnya dari daftar;
+<span class="ui">Kosongkan Daftar</span> menghapus semua entri yang tidak disematkan. Berkas yang disematkan tetap berada di atas
+dan tidak pernah keluar dari daftar. Jika sebuah berkas sudah tidak ada, editor menawarkan untuk menghapusnya dari daftar.</p>
+
+<h2>Menu Jendela</h2>
+
+<p>Menu <span class="menu">Jendela</span> mencantumkan semua jendela yang terbuka. Jendela saat ini diberi tanda centang; pilih
+jendela lain untuk menampilkannya di depan.</p>
+
+<h2>Posisi jendela</h2>
+
+<p>Editor mengingat posisi dan ukuran jendelanya, serta lebar kolom tabel. Tabel dan definisi bahasa masing-masing memiliki
+posisinya sendiri. Jendela baru yang dibuka dari jendela berjenis sama ditempatkan sedikit bergeser, sehingga tidak menutupi
+jendela lainnya secara persis.</p>
+			<div class="pager">
+				<a class="prev" href="concepts.html"><small>Sebelumnya</small>Dasar-dasar</a>
+				<a class="next" href="tables.html"><small>Berikutnya</small>Tabel bahasa</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

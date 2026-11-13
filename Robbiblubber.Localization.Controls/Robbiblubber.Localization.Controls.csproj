@@ -1,0 +1,167 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-windows;net10.0-windows</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>robbiblubber.org Localization Controls Library</Title>
+    <Authors>Alexander Lang</Authors>
+    <Company>robbiblubber.org</Company>
+    <Product>robbiblubber.org Localization Library</Product>
+    <Description>The robbiblubber.org Localization Controls Library localizes Windows Forms user interfaces.</Description>
+    <Copyright>© 2026 robbiblubber.org</Copyright>
+    <PackageProjectUrl>https://bitbucket.org/robbiblubber/robbiblubber.localization.net/</PackageProjectUrl>
+    <PackageIcon>nuget_robbiblubber.png</PackageIcon>
+    <RepositoryUrl>https://bitbucket.org/robbiblubber/robbiblubber.localization.net/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>locale, localization, winforms</PackageTags>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Version>2.4.6</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\localeprovider.bmp" />
+    <None Remove="Resources\localeselector.bmp" />
+    <None Remove="Resources\localizabletooltip.bmp" />
+    <None Remove="Resources\lunk.png" />
+    <None Remove="Resources\sunk.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Robbiblubber.Localization\Properties\AssemblyVersion.cs" Link="Properties\AssemblyVersion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\localeprovider.bmp" />
+    <EmbeddedResource Include="Resources\localeselector.bmp" />
+    <EmbeddedResource Include="Resources\localizabletooltip.bmp" />
+    <EmbeddedResource Include="Resources\lunk.png" />
+    <EmbeddedResource Include="Resources\sunk.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook.Controls\Robbiblubber.Spellbook.Controls.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization\Robbiblubber.Localization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="nuget_robbiblubber.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="locale\spellbook.colordialog.de.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.colordialog.en.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.colordialog.fr.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.colordialog.id.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeselector.de.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeselector.en.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeselector.fr.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeselector.id.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.msgbox.de.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.msgbox.en.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.msgbox.fr.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.msgbox.id.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeeditor.de.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeeditor.en.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeeditor.fr.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+    <None Update="locale\spellbook.themeeditor.id.ltab">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>contentFiles\any\any\locale\</PackagePath>
+      <PackageCopyToOutput>True</PackageCopyToOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

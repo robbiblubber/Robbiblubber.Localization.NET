@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fichiers et fenêtres – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/windows.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/windows.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/windows.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html" class="current">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Fichiers et fenêtres</h1>
+
+<p class="lead">Chaque fichier a sa propre fenêtre. Toutes les fenêtres appartiennent au même éditeur en cours d'exécution,
+partagent les menus et la liste des fichiers récents, et peuvent être disposées côte à côte.</p>
+
+<h2>Créer des fichiers</h2>
+
+<ul>
+	<li><span class="menu">Fichier › Nouveau › Table</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>) ouvre une nouvelle fenêtre avec une table
+		de langue vide.</li>
+	<li><span class="menu">Fichier › Nouveau › Définition</span> (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>N</kbd>) ouvre une nouvelle
+		fenêtre avec une définition de langue vide.</li>
+</ul>
+
+<h2>Ouvrir des fichiers</h2>
+
+<p><span class="menu">Fichier › Ouvrir...</span> (<kbd>Ctrl</kbd>+<kbd>O</kbd>) ouvre un ou plusieurs fichiers ; vous pouvez en
+sélectionner plusieurs dans la boîte de dialogue. L'éditeur reconnaît les tables de langue et les définitions de langue à leur
+contenu, et non à leur nom de fichier.</p>
+
+<ul>
+	<li>Si la fenêtre active contient un nouveau document du même type, encore inchangé, le fichier le remplace ; sinon, une
+		nouvelle fenêtre s'ouvre.</li>
+	<li>Si le fichier est déjà ouvert, sa fenêtre passe au premier plan et affiche le fichier tel qu'il est sur le disque. Si vous
+		l'y avez modifié, l'éditeur vous demande d'abord s'il faut abandonner vos modifications.</li>
+	<li>Vous pouvez aussi ouvrir des fichiers en les passant à <code>led.exe</code>, par exemple en les faisant glisser dessus dans
+		l'Explorateur ou en lançant <code>led app.de.ltab</code> dans une invite de commandes. Si l'éditeur est déjà en cours
+		d'exécution, les fichiers s'ouvrent dans celui-ci.</li>
+	<li>Si un fichier contient plusieurs fois la même entrée, l'éditeur affiche un avertissement avec les symboles concernés. Seule
+		la dernière valeur de chacun est affichée et enregistrée à nouveau.</li>
+</ul>
+
+<h2>Enregistrer</h2>
+
+<ul>
+	<li><span class="menu">Fichier › Enregistrer</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>) enregistre le fichier. Un nouveau fichier
+		est enregistré avec <span class="menu">Enregistrer sous</span>.</li>
+	<li><span class="menu">Fichier › Enregistrer sous...</span> (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>S</kbd>) enregistre sous un
+		nouveau nom. Pour les tables de langue, vous avez le choix entre une table normale (<code>.ltab</code>) et une table
+		compressée (<code>.cltab</code>).</li>
+	<li>Avant d'enregistrer, l'éditeur vérifie le document et liste les éventuels problèmes, par exemple une langue manquante ou
+		des symboles en double. Vous pouvez enregistrer quand même, ou annuler pour les corriger d'abord.</li>
+	<li>Un fichier ouvert dans une autre fenêtre ne peut pas être écrasé ; fermez-le d'abord dans cette fenêtre.</li>
+</ul>
+
+<h2>Modifications non enregistrées</h2>
+
+<p>Un <code>*</code> après le nom du fichier, dans la barre de titre et dans le menu <span class="menu">Fenêtre</span>, indique
+que le document contient des modifications non enregistrées. Si vous rétablissez l'état enregistré, le <code>*</code>
+disparaît. Lorsque vous fermez une fenêtre contenant des modifications non enregistrées, l'éditeur vous demande s'il faut les
+enregistrer.</p>
+
+<h2>Fermer</h2>
+
+<p><span class="menu">Fichier › Fermer</span> (<kbd>Ctrl</kbd>+<kbd>W</kbd>) ferme la fenêtre active. L'éditeur se termine
+lorsque sa dernière fenêtre est fermée ; il n'y a pas de commande Quitter distincte.</p>
+
+<h2>Fichiers récents</h2>
+
+<p><span class="menu">Fichier › Fichiers récents</span> liste les derniers fichiers que vous avez ouverts ou enregistrés, le plus
+récent en premier. Cliquez avec le bouton droit sur une entrée pour l'ouvrir, l'épingler ou la retirer de la liste ;
+<span class="ui">Vider la liste</span> supprime toutes les entrées non épinglées. Les fichiers épinglés restent en haut et ne
+disparaissent jamais de la liste. Si un fichier n'existe plus, l'éditeur propose de le retirer de la liste.</p>
+
+<h2>Le menu Fenêtre</h2>
+
+<p>Le menu <span class="menu">Fenêtre</span> liste toutes les fenêtres ouvertes. La fenêtre active est cochée ; sélectionnez-en
+une autre pour la faire passer au premier plan.</p>
+
+<h2>Position des fenêtres</h2>
+
+<p>L'éditeur mémorise la position et la taille de ses fenêtres, ainsi que la largeur des colonnes des tables. Les tables et les
+définitions de langue ont chacune leur propre position. Une nouvelle fenêtre ouverte depuis une fenêtre du même type est
+légèrement décalée, afin de ne pas recouvrir exactement l'autre.</p>
+			<div class="pager">
+				<a class="prev" href="concepts.html"><small>Précédent</small>Notions de base</a>
+				<a class="next" href="tables.html"><small>Suivant</small>Tables de langue</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

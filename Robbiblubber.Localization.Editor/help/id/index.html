@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Localization Editor – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/index.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/index.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/index.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html" class="current">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Localization Editor</h1>
+
+<p class="lead">Localization Editor membuat dan mengedit berkas yang memungkinkan sebuah aplikasi berbicara dalam beberapa bahasa:
+<strong>tabel bahasa</strong> yang berisi teks-teks satu bahasa, dan <strong>definisi bahasa</strong> yang menjelaskan sebuah
+bahasa beserta nama dan ikonnya.</p>
+
+<h2>Langkah pertama</h2>
+
+<ol class="steps">
+	<li>Saat editor dimulai, editor menampilkan tabel bahasa yang kosong. Anda dapat membuat tabel lain kapan saja dengan
+		<span class="menu">Berkas › Baru › Tabel</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>).</li>
+	<li>Isi bagian kepala: masukkan bahasa di <span class="ui">Bahasa</span> (misalnya <code>de</code>) dan
+		<span class="ui">Prefiks</span> yang digunakan aplikasi Anda (misalnya <code>app</code>).</li>
+	<li>Masukkan satu teks per baris: <span class="ui">Simbol</span> adalah nama yang digunakan aplikasi Anda untuk teks tersebut
+		(misalnya <code>menu.file.open</code>), <span class="ui">Teks</span> adalah apa yang dilihat pengguna (misalnya
+		<code>&amp;Öffnen...</code>). Klik baris terakhir yang kosong untuk menambahkan entri baru.</li>
+	<li>Simpan tabel dengan <span class="menu">Berkas › Simpan</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>). Editor menyarankan nama berkas
+		seperti <code>app.de.ltab</code>.</li>
+	<li>Untuk bahasa lain, buat tabel baru, tentukan bahasanya, lalu salin semua entri dari tabel pertama ke dalamnya dengan
+		<span class="menu">Alat › Impor...</span>. Setelah itu terjemahkan teksnya baris demi baris.</li>
+</ol>
+
+<div class="tip">
+	<p>Tekan <kbd>F1</kbd> di jendela mana pun dalam editor untuk membuka halaman bantuan yang sesuai dengan jendela tersebut.</p>
+</div>
+
+<h2>Topik</h2>
+
+<div class="cards">
+	<a href="concepts.html"><strong>Dasar-dasar</strong><span>Bahasa, tabel bahasa, simbol, prefiks, dan placeholder.</span></a>
+	<a href="windows.html"><strong>Berkas dan jendela</strong><span>Membuat, membuka, menyimpan, dan menutup; berkas terakhir dan
+		menu Jendela.</span></a>
+	<a href="tables.html"><strong>Tabel bahasa</strong><span>Kolom kepala, entri, karakter khusus, dan masalah.</span></a>
+	<a href="editing.html"><strong>Pengeditan dan papan klip</strong><span>Perintah edit, menu konteks, menyalin dari dan ke
+		Excel.</span></a>
+	<a href="find.html"><strong>Cari dan ganti</strong><span>Mencari simbol dan teks, mengganti, ekspresi reguler.</span></a>
+	<a href="tools.html"><strong>Alat</strong><span>Editor teks untuk teks panjang, mengurutkan dan mengimpor entri.</span></a>
+	<a href="definitions.html"><strong>Definisi bahasa</strong><span>Kunci, bahasa dasar, nama, dan ikon sebuah bahasa.</span></a>
+	<a href="settings.html"><strong>Pengaturan</strong><span>Bahasa dan tema editor, bahasa tambahan, dan pengaturan yang
+		disimpan.</span></a>
+	<a href="shortcuts.html"><strong>Pintasan keyboard</strong><span>Semua pintasan sekilas.</span></a>
+</div>
+
+<h2>Jenis berkas</h2>
+
+<table>
+	<tr><th>Ekstensi</th><th>Isi</th></tr>
+	<tr><td><code>.ltab</code></td><td>Tabel bahasa: teks-teks satu bahasa, sebagai teks yang dapat dibaca.</td></tr>
+	<tr><td><code>.cltab</code></td><td>Tabel bahasa terkompresi: isi yang sama, tetapi lebih kecil dan tidak dapat dibaca sebagai
+		teks.</td></tr>
+	<tr><td><code>.locale</code></td><td>Definisi bahasa: kunci, nama, bahasa dasar, dan ikon sebuah bahasa.</td></tr>
+</table>
+			<div class="pager">
+				<a class="next" href="concepts.html"><small>Berikutnya</small>Dasar-dasar</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

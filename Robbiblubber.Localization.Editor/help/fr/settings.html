@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Paramètres – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/settings.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/settings.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/settings.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html" class="current">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Paramètres</h1>
+
+<p class="lead"><span class="menu">Outils › Paramètres...</span> (<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>) ouvre les paramètres
+de l'éditeur.</p>
+
+<h2>Langue de l'éditeur</h2>
+
+<p>Sous <span class="ui">Environnement › Langues</span>, choisissez la <span class="ui">Langue de l'interface</span>. Toutes les
+fenêtres changent aussitôt de langue, ce qui vous permet de voir le résultat immédiatement. <span class="ui">OK</span> conserve
+la nouvelle langue ; <span class="ui">Annuler</span> ou <kbd>Échap</kbd> rétablit la précédente. L'éditeur mémorise votre
+choix.</p>
+
+<p>L'éditeur est fourni en English, Deutsch, Français et Bahasa Indonesia.</p>
+
+<h2>Ajouter une langue à l'éditeur</h2>
+
+<p>L'éditeur est localisé à l'aide de ses propres fichiers : vous pouvez donc le traduire vous-même.</p>
+
+<ol>
+	<li>Créez une définition de langue pour la langue, par exemple <code>es.locale</code>.</li>
+	<li>Ouvrez la table anglaise de l'éditeur, <code>led.en.ltab</code>, dans le dossier <code>locale</code> à côté de
+		<code>led.exe</code>, enregistrez-la sous <code>led.es.ltab</code>, définissez sa <span class="ui">Langue</span> sur
+		<code>es</code> et traduisez les textes.</li>
+	<li>Placez les deux fichiers dans le dossier <code>locale</code> à côté de <code>led.exe</code> et redémarrez
+		l'éditeur.</li>
+</ol>
+
+<p>La nouvelle langue apparaît alors dans les paramètres. Les textes absents de votre table s'affichent en anglais.</p>
+
+<h2>Apparence</h2>
+
+<p>Sous <span class="ui">Environnement › Apparence</span>, choisissez le <span class="ui">Thème</span> de l'éditeur. Comme pour la
+langue, toutes les fenêtres changent aussitôt ; <span class="ui">OK</span> conserve le thème, <span class="ui">Annuler</span>
+rétablit le précédent.</p>
+
+<table>
+	<tr><th>Thème</th><th>Couleurs</th></tr>
+	<tr><td><span class="ui">Automatique</span></td><td>Clair ou sombre, selon le réglage des applications dans les paramètres de
+		Windows ; en contraste élevé, les couleurs de Windows</td></tr>
+	<tr><td><span class="ui">Système</span></td><td>Les couleurs de Windows, comme sans thème</td></tr>
+	<tr><td><span class="ui">Clair</span></td><td>Couleurs claires</td></tr>
+	<tr><td><span class="ui">Sombre</span></td><td>Couleurs sombres</td></tr>
+</table>
+
+<p>Vos propres thèmes suivent les thèmes intégrés dans la liste.</p>
+
+<h3>Vos propres thèmes</h3>
+
+<p>Le lien <span class="ui">Personnaliser...</span> à côté de la liste ouvre l'éditeur de thèmes. Créez un thème avec
+<span class="ui">Nouveau</span> ou <span class="ui">Copier</span>. Chaque thème est <span class="ui">Basé sur</span> un autre thème
+et ne modifie que les couleurs que vous définissez : sélectionnez une couleur et cliquez sur <span class="ui">Modifier...</span> ;
+<span class="ui">Réinitialiser la couleur</span> reprend la couleur du thème de base. L'aperçu montre aussitôt le résultat.
+<span class="ui">Importer...</span> et <span class="ui">Exporter...</span> échangent des thèmes sous forme de fichiers
+<code>.theme</code>, <span class="ui">Supprimer</span> efface un thème. Les thèmes intégrés ne peuvent pas être modifiés.</p>
+
+<p>Si vous fermez l'éditeur de thèmes avec <span class="ui">OK</span>, le thème choisi devient le thème de l'éditeur et vos
+thèmes sont enregistrés aussitôt, même si vous fermez ensuite les paramètres avec <span class="ui">Annuler</span>.</p>
+
+<div class="note">
+	<p>Vos thèmes sont conservés dans <code>%APPDATA%\robbiblubber\themes</code>. Les autres applications de robbiblubber.org qui
+	prennent en charge les thèmes utilisent le même dossier : un thème créé ici y est également disponible, et inversement.
+	Chaque application mémorise son propre choix de thème.</p>
+</div>
+
+<h2>Paramètres enregistrés</h2>
+
+<p>L'éditeur conserve ses paramètres pour chaque utilisateur dans <code>%LOCALAPPDATA%\robbiblubber.org\led</code> :</p>
+
+<table>
+	<tr><th>Fichier</th><th>Contenu</th></tr>
+	<tr><td><code>led.settings</code></td><td>Langue de l'éditeur, historique et options de recherche</td></tr>
+	<tr><td><code>led.recent</code></td><td>La liste des fichiers récents</td></tr>
+	<tr><td><code>led.layout</code></td><td>Positions et tailles des fenêtres, largeurs des colonnes des tables</td></tr>
+	<tr><td><code>led.themes</code></td><td>Le thème de l'éditeur</td></tr>
+</table>
+
+<div class="tip">
+	<p>Si une fenêtre s'ouvre à un endroit inattendu, fermez l'éditeur et supprimez <code>led.layout</code>. Toutes les fenêtres
+	s'ouvrent alors de nouveau à leur position par défaut.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="definitions.html"><small>Précédent</small>Définitions de langue</a>
+				<a class="next" href="shortcuts.html"><small>Suivant</small>Raccourcis clavier</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

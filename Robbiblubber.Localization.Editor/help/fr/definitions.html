@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Définitions de langue – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/definitions.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/definitions.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/definitions.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html" class="current">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Définitions de langue</h1>
+
+<p class="lead">Une définition de langue (<code>.locale</code>) décrit une langue : sa clé, son nom, sa langue de base et les
+icônes affichées lorsque l'utilisateur choisit une langue. Pour en créer une, utilisez
+<span class="menu">Fichier › Nouveau › Définition</span> (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>N</kbd>).</p>
+
+<h2>Champs</h2>
+
+<table>
+	<tr><th>Champ</th><th>Signification</th></tr>
+	<tr><td><span class="ui">Clé</span></td><td>La clé courte de la langue, par exemple <code>de</code> ou <code>de-AT</code>.
+		Elle ne doit pas contenir d'espaces. Les tables de langue font référence à la langue par cette clé.</td></tr>
+	<tr><td><span class="ui">Clé de base</span></td><td>La clé de la langue de base, par exemple <code>de</code> pour
+		<code>de-AT</code>. Les textes que la langue ne définit pas sont repris de celle-ci. Choisissez-en une dans la liste ou
+		saisissez une clé quelconque ; laissez le champ vide pour une langue sans langue de base.</td></tr>
+	<tr><td><span class="ui">Nom</span></td><td>Le nom présenté à l'utilisateur, généralement dans la langue elle-même, par exemple
+		<code>Deutsch</code>. S'il est vide, la clé est utilisée.</td></tr>
+	<tr><td><span class="ui">Langue par défaut</span></td><td>L'application utilise cette langue si aucune autre n'a été
+		choisie.</td></tr>
+	<tr><td><span class="ui">De droite à gauche</span></td><td>La langue s'écrit de droite à gauche, par exemple l'arabe ou
+		l'hébreu.</td></tr>
+</table>
+
+<p>Les problèmes, comme une clé contenant des espaces ou une clé de base identique à la clé, s'affichent en rouge dans la barre
+d'état.</p>
+
+<h2>Icônes</h2>
+
+<p>Une langue a une <span class="ui">Petite icône</span> de 16 × 16 pixels, affichée dans les listes et les menus, et une
+<span class="ui">Grande icône</span> de 32 × 32 pixels, utilisée avec une mise à l'échelle de l'affichage plus élevée. À côté de
+chaque icône, vous voyez sa taille réelle ; l'éditeur signale les tailles inhabituelles. Les fichiers image sont enregistrés
+sans modification ; les images collées sont stockées au format PNG.</p>
+
+<p>Pour définir une icône :</p>
+
+<ul>
+	<li>double-cliquez sur la zone de l'icône ou choisissez <span class="ui">Charger...</span> dans son menu contextuel, puis
+		sélectionnez un fichier image ;</li>
+	<li>faites glisser un fichier image depuis l'Explorateur sur la zone ; ou</li>
+	<li>cliquez sur la zone et collez (<kbd>Ctrl</kbd>+<kbd>V</kbd>) une image copiée dans un autre programme, ou un fichier image
+		copié dans l'Explorateur.</li>
+</ul>
+
+<p>Une zone d'icône sélectionnée prend aussi en charge Copier, Couper et Supprimer, par le menu <span class="menu">Édition</span>,
+le menu contextuel ou les raccourcis. Copiez la petite icône et collez-la dans la zone de la grande pour utiliser la même image
+pour les deux.</p>
+
+<h2>Enregistrer</h2>
+
+<p>Une définition ne peut être enregistrée qu'avec une clé valide. S'il manque une icône, l'éditeur vous avertit : sans petite
+icône, le sélecteur de langue affiche un espace réservé ; sans grande icône, la petite est utilisée à la place. Pour une
+nouvelle définition, l'éditeur propose <code>&lt;key&gt;.locale</code> comme nom de fichier.</p>
+
+<div class="tip">
+	<p>Une application trouve ses langues aux mêmes endroits que ses tables de langue. Pour proposer une nouvelle langue,
+	fournissez le fichier <code>.locale</code> avec les tables de langue correspondantes.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tools.html"><small>Précédent</small>Outils</a>
+				<a class="next" href="settings.html"><small>Suivant</small>Paramètres</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

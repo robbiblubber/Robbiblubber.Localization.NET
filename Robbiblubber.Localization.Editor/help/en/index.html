@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Localization Editor – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/index.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/index.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/index.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html" class="current">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Localization Editor</h1>
+
+<p class="lead">The Localization Editor creates and edits the files that let an application speak several languages: <strong>language
+tables</strong> with the texts of one language, and <strong>locale definitions</strong> that describe a language with its name and
+icons.</p>
+
+<h2>First steps</h2>
+
+<ol class="steps">
+	<li>When the editor starts, it shows an empty language table. You can create further tables at any time with
+		<span class="menu">File › New › Table</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>).</li>
+	<li>Fill in the header: enter the language in <span class="ui">Locale</span> (for example <code>de</code>) and the
+		<span class="ui">Prefixes</span> your application uses (for example <code>app</code>).</li>
+	<li>Enter one text per row: the <span class="ui">Symbol</span> is the name your application uses for the text (for example
+		<code>menu.file.open</code>), the <span class="ui">Text</span> is what the user sees (for example <code>&amp;Öffnen...</code>).
+		Click the empty last row to add a new entry.</li>
+	<li>Save the table with <span class="menu">File › Save</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>). The editor suggests a file name such
+		as <code>app.de.ltab</code>.</li>
+	<li>For a further language, create a new table, set its locale and copy all entries of the first table into it with
+		<span class="menu">Tools › Import...</span>. Then translate the texts row by row.</li>
+</ol>
+
+<div class="tip">
+	<p>Press <kbd>F1</kbd> in any window of the editor to open the help page that belongs to it.</p>
+</div>
+
+<h2>Topics</h2>
+
+<div class="cards">
+	<a href="concepts.html"><strong>Basics</strong><span>Locales, language tables, symbols, prefixes and placeholders.</span></a>
+	<a href="windows.html"><strong>Files and windows</strong><span>Creating, opening, saving and closing; recent files and the
+		Window menu.</span></a>
+	<a href="tables.html"><strong>Language tables</strong><span>Header fields, entries, special characters and problems.</span></a>
+	<a href="editing.html"><strong>Editing and clipboard</strong><span>Edit commands, context menus, copying from and to Excel.</span></a>
+	<a href="find.html"><strong>Find and replace</strong><span>Searching symbols and texts, replacing, regular expressions.</span></a>
+	<a href="tools.html"><strong>Tools</strong><span>Text editor for long texts, sorting and importing entries.</span></a>
+	<a href="definitions.html"><strong>Locale definitions</strong><span>Key, base locale, name and icons of a language.</span></a>
+	<a href="settings.html"><strong>Settings</strong><span>Language and theme of the editor, further languages and stored settings.</span></a>
+	<a href="shortcuts.html"><strong>Keyboard shortcuts</strong><span>All shortcuts at a glance.</span></a>
+</div>
+
+<h2>File types</h2>
+
+<table>
+	<tr><th>Extension</th><th>Content</th></tr>
+	<tr><td><code>.ltab</code></td><td>Language table: the texts of one language, as readable text.</td></tr>
+	<tr><td><code>.cltab</code></td><td>Compressed language table: the same content, but smaller and not readable as text.</td></tr>
+	<tr><td><code>.locale</code></td><td>Locale definition: key, name, base locale and icons of a language.</td></tr>
+</table>
+			<div class="pager">
+				<a class="next" href="concepts.html"><small>Next</small>Basics</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

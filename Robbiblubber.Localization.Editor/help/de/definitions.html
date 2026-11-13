@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sprachdefinitionen – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/definitions.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/definitions.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/definitions.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html" class="current">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Sprachdefinitionen</h1>
+
+<p class="lead">Eine Sprachdefinition (<code>.locale</code>) beschreibt eine Sprache: ihren Schlüssel, ihren Namen, ihre Basissprache
+und die Icons, die bei der Auswahl einer Sprache angezeigt werden. Eine neue legen Sie mit
+<span class="menu">Datei › Neu › Definition</span> (<kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>N</kbd>) an.</p>
+
+<h2>Felder</h2>
+
+<table>
+	<tr><th>Feld</th><th>Bedeutung</th></tr>
+	<tr><td><span class="ui">Schlüssel</span></td><td>Der kurze Schlüssel der Sprache, zum Beispiel <code>de</code> oder
+		<code>de-AT</code>. Er darf keine Leerzeichen enthalten. Sprachtabellen verweisen über diesen Schlüssel auf die
+		Sprache.</td></tr>
+	<tr><td><span class="ui">Basis-Schlüssel</span></td><td>Der Schlüssel der Basissprache, zum Beispiel <code>de</code> für
+		<code>de-AT</code>. Texte, die die Sprache nicht selbst enthält, kommen von dort. Wählen Sie einen aus der Liste oder geben
+		Sie einen beliebigen Schlüssel ein; für eine Sprache ohne Basis lassen Sie das Feld leer.</td></tr>
+	<tr><td><span class="ui">Name</span></td><td>Der Name, den der Benutzer sieht, meist in der Sprache selbst, zum Beispiel
+		<code>Deutsch</code>. Ist er leer, wird der Schlüssel verwendet.</td></tr>
+	<tr><td><span class="ui">Standardsprache</span></td><td>Die Anwendung verwendet diese Sprache, wenn keine andere gewählt
+		wurde.</td></tr>
+	<tr><td><span class="ui">Rechts nach links</span></td><td>Die Sprache wird von rechts nach links geschrieben, zum Beispiel
+		Arabisch oder Hebräisch.</td></tr>
+</table>
+
+<p>Probleme wie ein Schlüssel mit Leerzeichen oder ein Basis-Schlüssel, der dem Schlüssel gleicht, zeigt die Statusleiste in
+Rot.</p>
+
+<h2>Icons</h2>
+
+<p>Eine Sprache hat ein <span class="ui">Kleines Symbol</span> mit 16 × 16 Pixeln für Listen und Menüs und ein
+<span class="ui">Großes Symbol</span> mit 32 × 32 Pixeln, das bei höherer Anzeigeskalierung verwendet wird. Neben jedem Icon steht
+seine tatsächliche Größe; ungewöhnliche Größen merkt der Editor an. Bilddateien werden unverändert gespeichert, eingefügte Bilder
+als PNG.</p>
+
+<p>So setzen Sie ein Icon:</p>
+
+<ul>
+	<li>Doppelklicken Sie auf das Feld des Icons oder wählen Sie <span class="ui">Laden...</span> in seinem Kontextmenü und wählen
+		Sie eine Bilddatei;</li>
+	<li>ziehen Sie eine Bilddatei aus dem Explorer auf das Feld; oder</li>
+	<li>klicken Sie auf das Feld und fügen Sie (<kbd>Strg</kbd>+<kbd>V</kbd>) ein Bild ein, das Sie in einem anderen Programm
+		kopiert haben, oder eine im Explorer kopierte Bilddatei.</li>
+</ul>
+
+<p>Ein ausgewähltes Icon-Feld unterstützt auch Kopieren, Ausschneiden und Löschen, über das Menü
+<span class="menu">Bearbeiten</span>, das Kontextmenü oder die Tastenkürzel. Kopieren Sie das kleine Icon und fügen Sie es in das
+große Feld ein, um für beide dasselbe Bild zu verwenden.</p>
+
+<h2>Speichern</h2>
+
+<p>Eine Definition lässt sich nur mit einem gültigen Schlüssel speichern. Fehlt ein Icon, warnt Sie der Editor: Ohne kleines Icon
+zeigt die Sprachauswahl einen Platzhalter, ohne großes wird das kleine verwendet. Für eine neue Definition schlägt der Editor
+<code>&lt;schlüssel&gt;.locale</code> als Dateinamen vor.</p>
+
+<div class="tip">
+	<p>Eine Anwendung findet ihre Sprachen an denselben Stellen wie ihre Sprachtabellen. Um eine neue Sprache anzubieten, liefern Sie
+	die <code>.locale</code>-Datei zusammen mit den Sprachtabellen dafür aus.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tools.html"><small>Zurück</small>Extras</a>
+				<a class="next" href="settings.html"><small>Weiter</small>Einstellungen</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

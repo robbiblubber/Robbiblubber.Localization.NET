@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFrameworks>net8.0-windows;net10.0-windows</TargetFrameworks>
+        <UseWindowsForms>true</UseWindowsForms>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Robbiblubber.Localization.Samples.Controls</RootNamespace>
+        <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+        <ApplicationVisualStyles>true</ApplicationVisualStyles>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="..\Robbiblubber.Localization\Properties\AssemblyVersion.cs" Link="Properties\AssemblyVersion.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Robbiblubber.Localization.Controls\Robbiblubber.Localization.Controls.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Locales\*.locale" CopyToOutputDirectory="PreserveNewest" />
+        <None Update="Locales\*.ltab" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="locale\ar.locale">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\de.locale">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\en.locale">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\fr.locale">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\sample.ar.ltab">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\sample.de.ltab">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\sample.en.ltab">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="locale\sample.fr.ltab">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

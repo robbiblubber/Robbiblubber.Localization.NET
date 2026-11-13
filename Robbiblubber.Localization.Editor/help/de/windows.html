@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dateien und Fenster – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/windows.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/windows.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/windows.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html" class="current">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Dateien und Fenster</h1>
+
+<p class="lead">Jede Datei hat ihr eigenes Fenster. Alle Fenster gehören zu einem laufenden Editor, teilen sich die Menüs und die
+Liste der zuletzt geöffneten Dateien und lassen sich nebeneinander anordnen.</p>
+
+<h2>Dateien anlegen</h2>
+
+<ul>
+	<li><span class="menu">Datei › Neu › Tabelle</span> (<kbd>Strg</kbd>+<kbd>N</kbd>) öffnet ein neues Fenster mit einer leeren
+		Sprachtabelle.</li>
+	<li><span class="menu">Datei › Neu › Definition</span> (<kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>N</kbd>) öffnet ein neues Fenster
+		mit einer leeren Sprachdefinition.</li>
+</ul>
+
+<h2>Dateien öffnen</h2>
+
+<p><span class="menu">Datei › Öffnen...</span> (<kbd>Strg</kbd>+<kbd>O</kbd>) öffnet eine oder mehrere Dateien; im Dialog können
+Sie mehrere auswählen. Der Editor erkennt Sprachtabellen und Sprachdefinitionen an ihrem Inhalt, nicht am Dateinamen.</p>
+
+<ul>
+	<li>Enthält das aktuelle Fenster ein neues, unverändertes Dokument derselben Art, ersetzt die Datei es; sonst öffnet sich ein
+		neues Fenster.</li>
+	<li>Ist die Datei schon geöffnet, kommt ihr Fenster nach vorn und zeigt die Datei so, wie sie auf dem Datenträger steht. Haben
+		Sie sie dort geändert, fragt der Editor zuerst, ob Ihre Änderungen verworfen werden sollen.</li>
+	<li>Sie können Dateien auch öffnen, indem Sie sie an <code>led.exe</code> übergeben, zum Beispiel per Ziehen auf
+		<code>led.exe</code> im Explorer oder mit <code>led app.de.ltab</code> in der Eingabeaufforderung. Läuft der Editor schon,
+		öffnen sich die Dateien im laufenden Editor.</li>
+	<li>Enthält eine Datei denselben Eintrag mehrfach, zeigt der Editor eine Warnung mit den betroffenen Symbolen. Angezeigt und
+		wieder gespeichert wird jeweils nur der letzte Wert.</li>
+</ul>
+
+<h2>Speichern</h2>
+
+<ul>
+	<li><span class="menu">Datei › Speichern</span> (<kbd>Strg</kbd>+<kbd>S</kbd>) speichert die Datei. Eine neue Datei wird mit
+		<span class="menu">Speichern unter</span> gespeichert.</li>
+	<li><span class="menu">Datei › Speichern unter...</span> (<kbd>Strg</kbd>+<kbd>Umschalt</kbd>+<kbd>S</kbd>) speichert unter einem
+		neuen Namen. Bei Sprachtabellen können Sie zwischen einer normalen (<code>.ltab</code>) und einer komprimierten Tabelle
+		(<code>.cltab</code>) wählen.</li>
+	<li>Vor dem Speichern prüft der Editor das Dokument und listet Probleme auf, zum Beispiel eine fehlende Sprache oder doppelte
+		Symbole. Sie können trotzdem speichern oder abbrechen und die Probleme zuerst beheben.</li>
+	<li>Eine Datei, die in einem anderen Fenster geöffnet ist, kann nicht überschrieben werden; schließen Sie sie dort zuerst.</li>
+</ul>
+
+<h2>Ungespeicherte Änderungen</h2>
+
+<p>Ein <code>*</code> hinter dem Dateinamen in der Titelleiste und im Menü <span class="menu">Fenster</span> zeigt, dass das
+Dokument ungespeicherte Änderungen hat. Machen Sie eine Änderung rückgängig, sodass wieder der gespeicherte Stand erreicht ist,
+verschwindet der <code>*</code> wieder. Schließen Sie ein Fenster mit ungespeicherten Änderungen, fragt der Editor, ob sie
+gespeichert werden sollen.</p>
+
+<h2>Schließen</h2>
+
+<p><span class="menu">Datei › Schließen</span> (<kbd>Strg</kbd>+<kbd>W</kbd>) schließt das aktuelle Fenster. Der Editor endet, wenn
+sein letztes Fenster geschlossen wird; einen eigenen Befehl zum Beenden gibt es nicht.</p>
+
+<h2>Zuletzt geöffnete Dateien</h2>
+
+<p><span class="menu">Datei › Zuletzt geöffnet</span> listet die Dateien, die Sie zuletzt geöffnet oder gespeichert haben, die
+neueste zuerst. Mit einem Rechtsklick auf einen Eintrag können Sie ihn öffnen, anheften oder aus der Liste entfernen;
+<span class="ui">Liste leeren</span> entfernt alle Einträge, die nicht angeheftet sind. Angeheftete Dateien stehen oben und fallen
+nie aus der Liste. Gibt es eine Datei nicht mehr, bietet der Editor an, sie aus der Liste zu entfernen.</p>
+
+<h2>Das Menü Fenster</h2>
+
+<p>Das Menü <span class="menu">Fenster</span> listet alle offenen Fenster. Das aktuelle ist markiert; wählen Sie ein anderes, um es
+nach vorn zu holen.</p>
+
+<h2>Fensterpositionen</h2>
+
+<p>Der Editor merkt sich Position und Größe seiner Fenster sowie die Breite der Tabellenspalten. Tabellen und Sprachdefinitionen
+haben jeweils eine eigene Position. Ein neues Fenster, das aus einem Fenster derselben Art geöffnet wird, erscheint leicht versetzt,
+damit es das andere nicht genau verdeckt.</p>
+			<div class="pager">
+				<a class="prev" href="concepts.html"><small>Zurück</small>Grundlagen</a>
+				<a class="next" href="tables.html"><small>Weiter</small>Sprachtabellen</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

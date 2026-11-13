@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Robbiblubber.Localization\Properties\AssemblyVersion.cs" Link="Properties\AssemblyVersion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\de.locale" />
+    <EmbeddedResource Include="TestData\en.locale" />
+    <EmbeddedResource Include="TestData\led-fr.ltab" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.1.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="4.11.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook\Robbiblubber.Spellbook.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization.Builder\Robbiblubber.Localization.Builder.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization.Controls\Robbiblubber.Localization.Controls.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization.Editor\Robbiblubber.Localization.Editor.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization\Robbiblubber.Localization.csproj" />
+  </ItemGroup>
+
+</Project>

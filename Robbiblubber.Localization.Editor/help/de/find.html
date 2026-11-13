@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Suchen und Ersetzen – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/find.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/find.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/find.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html" class="current">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Suchen und Ersetzen</h1>
+
+<p class="lead">Das Suchfenster durchsucht die Symbole und Texte der aktiven Sprachtabelle und ersetzt sie auf Wunsch.</p>
+
+<h2>Das Suchfenster öffnen</h2>
+
+<ul>
+	<li><span class="menu">Bearbeiten › Suchen...</span> (<kbd>Strg</kbd>+<kbd>F</kbd>) öffnet das Fenster zum Suchen.</li>
+	<li><span class="menu">Bearbeiten › Ersetzen...</span> (<kbd>Strg</kbd>+<kbd>H</kbd>) öffnet es mit dem zusätzlichen Feld
+		<span class="ui">Ersetzen durch</span>. Im Fenster wechseln <kbd>Strg</kbd>+<kbd>F</kbd> und <kbd>Strg</kbd>+<kbd>H</kbd>
+		zwischen beiden.</li>
+	<li>Ist eine Zelle markiert, wird ihr Text als Suchtext vorgeschlagen; während Sie eine Zelle bearbeiten, der markierte Teil
+		davon.</li>
+</ul>
+
+<p>Das Fenster bleibt vor den Editorfenstern und wirkt immer auf das zuletzt aktive Tabellenfenster. Sprachdefinitionen lassen sich
+nicht durchsuchen. <kbd>Esc</kbd> schließt das Fenster; es behält Texte, Optionen und Position für das nächste Mal.</p>
+
+<h2>Optionen</h2>
+
+<table>
+	<tr><th>Option</th><th>Wirkung</th></tr>
+	<tr><td><span class="ui">Suchen in</span></td><td>Durchsucht die Spalte <span class="ui">Symbol</span>, die Spalte
+		<span class="ui">Text</span> oder <span class="ui">Beides</span>. Bei beiden wird das Symbol einer Zeile vor ihrem Text
+		durchsucht.</td></tr>
+	<tr><td><span class="ui">Groß-/Kleinschreibung</span></td><td>Unterscheidet Groß- und Kleinbuchstaben.</td></tr>
+	<tr><td><span class="ui">Nur ganze Wörter</span></td><td>Findet den Suchtext nur, wenn er nicht Teil eines längeren Wortes
+		ist.</td></tr>
+	<tr><td><span class="ui">Reguläre Ausdrücke</span></td><td>Liest den Suchtext als regulären Ausdruck (siehe unten).</td></tr>
+	<tr><td><span class="ui">Rückwärts suchen</span></td><td>Sucht in Richtung Tabellenanfang.</td></tr>
+</table>
+
+<h2>Suchen</h2>
+
+<p><span class="ui">Weitersuchen</span> (oder <kbd>Eingabe</kbd>) markiert die nächste Zelle, die den Suchtext enthält. Am Ende der
+Tabelle geht die Suche am Anfang weiter; das Fenster meldet das in seiner Statusleiste. Wird nichts gefunden, hören Sie einen
+Signalton.</p>
+
+<p>Texte werden so durchsucht, wie die Tabelle sie zeigt; <code>\n</code> findet also Zeilenumbrüche.</p>
+
+<p>Sie müssen das Fenster nicht offen lassen: <span class="menu">Bearbeiten › Weitersuchen</span> (<kbd>F3</kbd>) und
+<kbd>Umschalt</kbd>+<kbd>F3</kbd> suchen mit dem letzten Suchtext und den letzten Optionen vorwärts und rückwärts. Das Ergebnis
+erscheint in der Statusleiste des Tabellenfensters.</p>
+
+<h2>Ersetzen</h2>
+
+<ul>
+	<li><span class="ui">Ersetzen</span> findet zuerst die nächste Zelle. Ein weiterer Klick ersetzt alle Vorkommen in dieser Zelle
+		und findet die nächste; so können Sie jede Zelle prüfen, bevor Sie ersetzen.</li>
+	<li><span class="ui">Alle ersetzen</span> sagt Ihnen, wie viele Stellen in wie vielen Zeilen ersetzt werden, und fragt vorher
+		nach.</li>
+</ul>
+
+<div class="warn">
+	<p>Ersetzen lässt sich nicht rückgängig machen. Speichern Sie die Tabelle, bevor Sie viel ersetzen.</p>
+</div>
+
+<h2>Reguläre Ausdrücke</h2>
+
+<p>Mit <span class="ui">Reguläre Ausdrücke</span> ist der Suchtext ein regulärer Ausdruck von .NET. Einige Beispiele:</p>
+
+<table>
+	<tr><th>Suchen nach</th><th>Findet</th></tr>
+	<tr><td><code>^menu\.</code></td><td>Symbole, die mit <code>menu.</code> beginnen</td></tr>
+	<tr><td><code>\.\.\.$</code></td><td>Texte, die mit <code>...</code> enden</td></tr>
+	<tr><td><code>\$[A-Z]+</code></td><td>Platzhalter wie <code>$NAME</code></td></tr>
+	<tr><td><code>^$</code></td><td>Leere Zellen</td></tr>
+</table>
+
+<p>Unter <span class="ui">Ersetzen durch</span> fügen <code>$1</code>, <code>$2</code> usw. die eingeklammerten Teile des Treffers
+ein. Zum Beispiel macht <code>^menu\.(\w+)$</code>, ersetzt durch <code>main.$1</code>, aus <code>menu.file</code> ein
+<code>main.file</code>. Ohne reguläre Ausdrücke wird <code>$1</code> so eingefügt, wie es ist.</p>
+
+<p>Ist der Ausdruck ungültig, sagt das Fenster, warum. Eine Suche, die zu lange dauert, wird abgebrochen.</p>
+
+<h2>Verlauf</h2>
+
+<p>Die Listen <span class="ui">Suchen nach</span> und <span class="ui">Ersetzen durch</span> bieten die letzten 10 verwendeten Texte
+an, und auch die Optionen bleiben erhalten, auch nach einem Neustart.</p>
+			<div class="pager">
+				<a class="prev" href="editing.html"><small>Zurück</small>Bearbeiten und Zwischenablage</a>
+				<a class="next" href="tools.html"><small>Weiter</small>Extras</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sprachtabellen – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/tables.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/tables.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/tables.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html" class="current">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Sprachtabellen</h1>
+
+<p class="lead">Das Fenster einer Sprachtabelle zeigt oben den Kopf der Tabelle und darunter ihre Einträge. Die Statusleiste unten
+zeigt die Anzahl der Einträge, Probleme und den Dateinamen.</p>
+
+<h2>Kopf</h2>
+
+<table>
+	<tr><th>Feld</th><th>Bedeutung</th></tr>
+	<tr><td><span class="ui">Schlüssel</span></td><td>Eine Kennung der Tabelle, zum Beispiel <code>lt.app</code>. Zum Abrufen von
+		Texten wird sie nicht verwendet.</td></tr>
+	<tr><td><span class="ui">Sprache</span></td><td>Der Schlüssel der Sprache, zu der die Texte gehören, zum Beispiel
+		<code>de</code> oder <code>de-AT</code>. Ohne Sprache wird die Tabelle für keine Sprache verwendet.</td></tr>
+	<tr><td><span class="ui">Name</span></td><td>Ein beschreibender Name, zum Beispiel <code>app.de</code>.</td></tr>
+	<tr><td><span class="ui">Version</span></td><td>Die Version der Tabelle, zum Beispiel <code>1.0</code>.</td></tr>
+	<tr><td><span class="ui">Präfixe</span></td><td>Ein oder mehrere Präfixe, getrennt durch <code>;</code> oder <code>,</code>
+		(siehe <a href="concepts.html">Grundlagen</a>). Leerzeichen werden ignoriert.</td></tr>
+	<tr><td><span class="ui">Autor</span></td><td>Wer die Tabelle erstellt hat.</td></tr>
+</table>
+
+<h2>Einträge</h2>
+
+<p>Jede Zeile der Tabelle ist ein Eintrag mit einem <span class="ui">Symbol</span> und einem <span class="ui">Text</span>.</p>
+
+<ul>
+	<li><strong>Hinzufügen:</strong> Schreiben Sie in die leere letzte Zeile. Eingefügte Zeilen kommen ebenfalls dorthin (siehe
+		<a href="editing.html">Bearbeiten und Zwischenablage</a>).</li>
+	<li><strong>Bearbeiten:</strong> Wählen Sie eine Zelle und beginnen Sie zu tippen, drücken Sie <kbd>F2</kbd> oder klicken Sie die
+		aktuelle Zelle noch einmal an. <kbd>Eingabe</kbd> übernimmt die Änderung, <kbd>Esc</kbd> verwirft sie.</li>
+	<li><strong>Lange Texte:</strong> Doppelklicken Sie auf eine Textzelle oder drücken Sie <kbd>Strg</kbd>+<kbd>E</kbd>, um den
+		Text im <a href="tools.html">Texteditor</a> zu bearbeiten.</li>
+	<li><strong>Löschen:</strong> Markieren Sie ganze Zeilen über die Zeilenköpfe links und drücken Sie <kbd>Entf</kbd>.</li>
+</ul>
+
+<p>Die Reihenfolge der Zeilen spielt keine Rolle. Die Datei wird immer nach Symbol sortiert gespeichert;
+<span class="menu">Extras › Sortieren</span> zeigt die Zeilen in dieser Reihenfolge.</p>
+
+<h2>Zeilenumbrüche, Tabulatoren und umgekehrte Schrägstriche</h2>
+
+<p>Die Tabelle zeigt jeden Text in einer Zeile. Sonderzeichen werden so geschrieben:</p>
+
+<table>
+	<tr><th>In der Tabelle</th><th>Bedeutung</th></tr>
+	<tr><td><code>\n</code></td><td>Zeilenumbruch</td></tr>
+	<tr><td><code>\t</code></td><td>Tabulator</td></tr>
+	<tr><td><code>\\</code></td><td>Ein umgekehrter Schrägstrich, wo er sonst als <code>\n</code> oder <code>\t</code> gelesen würde,
+		zum Beispiel <code>C:\\neu</code> für <code>C:\neu</code>.</td></tr>
+</table>
+
+<p>Andere umgekehrte Schrägstriche bleiben, wie sie sind: <code>C:\Daten</code> ist einfach <code>C:\Daten</code>. Im
+<a href="tools.html">Texteditor</a> sehen und schreiben Sie stattdessen echte Zeilenumbrüche und Tabulatoren.</p>
+
+<h2>Probleme</h2>
+
+<p>Zeilen mit einem Problem bekommen im Zeilenkopf eine rote Markierung; zeigen Sie darauf, um zu sehen, was nicht stimmt. Die
+Statusleiste zeigt die Anzahl solcher Zeilen.</p>
+
+<table>
+	<tr><th>Problem</th><th>Folge</th></tr>
+	<tr><td>Text ohne Symbol</td><td>Die Zeile wird nicht gespeichert.</td></tr>
+	<tr><td>Symbol kommt mehrfach vor</td><td>Nur die letzte dieser Zeilen wird gespeichert.</td></tr>
+	<tr><td>Symbol enthält ein Präfix (<code>:</code>)</td><td>Die Zeile wird gespeichert, aber die Anwendung würde
+		<code>app:app:...</code> suchen. Entfernen Sie das Präfix aus dem Symbol.</td></tr>
+</table>
+
+<p>Speichern Sie eine Tabelle mit Problemen, listet der Editor sie auf und fragt, ob trotzdem gespeichert werden soll. Er warnt
+auch, wenn das Feld <span class="ui">Sprache</span> leer ist.</p>
+
+<h2>Tabellen speichern</h2>
+
+<p>Für eine neue Tabelle schlägt der Editor einen Dateinamen aus dem ersten Präfix und der Sprache vor, zum Beispiel
+<code>app.de.ltab</code>. Im Speichern-Dialog können Sie <span class="ui">Komprimierte Sprachtabellen</span> wählen, um stattdessen
+eine <code>.cltab</code>-Datei zu speichern.</p>
+			<div class="pager">
+				<a class="prev" href="windows.html"><small>Zurück</small>Dateien und Fenster</a>
+				<a class="next" href="editing.html"><small>Weiter</small>Bearbeiten und Zwischenablage</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

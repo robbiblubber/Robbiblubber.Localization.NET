@@ -1,0 +1,48 @@
+﻿cid = lang.def;
+version = 3.0;
+
+data
+{
+    about.text = Beispiel für die Robbiblubber Localization Controls.;
+    button.send = Senden;
+    button.send.tip = Sendet das Formular.;
+    check.newsletter = Newsletter abonnieren;
+    color.blue = Blau;
+    color.green = Grün;
+    color.red = Rot;
+    column.price = Preis;
+    column.product = Produkt;
+    group.controls = Lokalisierte Controls;
+    label.combo = Kombinationsfeld:;
+    label.list = Listenfeld:;
+    label.listview = Listenansicht:;
+    label.locale = Sprache:;
+    label.name = Name:;
+    label.themedcombo = Themen-Kombifeld:;
+    label.tree = Strukturansicht:;
+    menu.file = &Datei;
+    menu.file.exit = &Beenden;
+    menu.help = &Hilfe;
+    menu.help.about = &Info;
+    node.carrot = Karotte;
+    node.fruit = Obst;
+    node.vegetables = Gemüse;
+    product.apple = Apfel;
+    product.pear = Birne;
+    status.count = $COUNT Farben ausgewählt;
+    text.name.description = Geben Sie den Namen des Kunden ein.;
+    text.name.name = Kundenname;
+    title = Beispiel Lokalisierungs-Controls;
+    tool.open = Öffnen;
+    tool.save = Speichern;
+}
+
+header
+{
+    author = robbiblubber.org;
+    key = sample.de;
+    lang = de;
+    name = Sample (de);
+    prefixes = sample;
+    version = 1.0;
+}

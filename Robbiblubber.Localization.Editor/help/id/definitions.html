@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Definisi bahasa – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/definitions.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/definitions.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/definitions.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html" class="current">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Definisi bahasa</h1>
+
+<p class="lead">Definisi bahasa (<code>.locale</code>) menjelaskan sebuah bahasa: kuncinya, namanya, bahasa dasarnya, dan ikon
+yang ditampilkan saat pengguna memilih bahasa. Buat definisi bahasa dengan <span class="menu">Berkas › Baru › Definisi</span>
+(<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>).</p>
+
+<h2>Kolom</h2>
+
+<table>
+	<tr><th>Kolom</th><th>Arti</th></tr>
+	<tr><td><span class="ui">Kunci</span></td><td>Kunci singkat bahasa, misalnya <code>de</code> atau <code>de-AT</code>. Kunci
+		tidak boleh berisi spasi. Tabel bahasa merujuk ke bahasa melalui kunci ini.</td></tr>
+	<tr><td><span class="ui">Kunci Dasar</span></td><td>Kunci bahasa dasar, misalnya <code>de</code> untuk <code>de-AT</code>.
+		Teks yang tidak ditentukan oleh bahasa ini diambil dari sana. Pilih salah satu dari daftar atau ketik kunci apa pun;
+		biarkan kosong untuk bahasa tanpa bahasa dasar.</td></tr>
+	<tr><td><span class="ui">Nama</span></td><td>Nama yang ditampilkan kepada pengguna, biasanya dalam bahasa itu sendiri, misalnya
+		<code>Deutsch</code>. Jika kosong, kunci yang digunakan.</td></tr>
+	<tr><td><span class="ui">Bahasa Bawaan</span></td><td>Aplikasi menggunakan bahasa ini jika belum ada bahasa lain yang
+		dipilih.</td></tr>
+	<tr><td><span class="ui">Kanan ke kiri</span></td><td>Bahasa ini ditulis dari kanan ke kiri, misalnya bahasa Arab atau
+		Ibrani.</td></tr>
+</table>
+
+<p>Masalah seperti kunci yang berisi spasi atau kunci dasar yang sama dengan kunci ditampilkan dengan warna merah di bilah
+status.</p>
+
+<h2>Ikon</h2>
+
+<p>Sebuah bahasa memiliki <span class="ui">Ikon Kecil</span> berukuran 16 × 16 piksel, yang ditampilkan di daftar dan menu, serta
+<span class="ui">Ikon Besar</span> berukuran 32 × 32 piksel, yang digunakan pada skala tampilan yang lebih tinggi. Di samping
+setiap ikon Anda melihat ukuran sebenarnya; editor menunjukkan jika ukurannya tidak biasa. Berkas gambar disimpan tanpa diubah;
+gambar yang ditempel disimpan sebagai PNG.</p>
+
+<p>Untuk menetapkan ikon:</p>
+
+<ul>
+	<li>klik ganda kotak ikon atau pilih <span class="ui">Muat...</span> di menu konteksnya, lalu pilih berkas gambar;</li>
+	<li>seret berkas gambar dari Explorer ke kotak tersebut; atau</li>
+	<li>klik kotak tersebut lalu tempel (<kbd>Ctrl</kbd>+<kbd>V</kbd>) gambar yang disalin di program lain, atau berkas gambar yang
+		disalin di Explorer.</li>
+</ul>
+
+<p>Kotak ikon yang dipilih juga mendukung Salin, Potong, dan Hapus, melalui menu <span class="menu">Edit</span>, menu konteks,
+atau pintasan. Salin ikon kecil dan tempel ke kotak ikon besar untuk menggunakan gambar yang sama untuk keduanya.</p>
+
+<h2>Menyimpan</h2>
+
+<p>Definisi hanya dapat disimpan dengan kunci yang valid. Jika sebuah ikon tidak ada, editor memperingatkan Anda: tanpa ikon kecil,
+pemilih bahasa menampilkan placeholder; tanpa ikon besar, ikon kecil digunakan sebagai gantinya. Untuk definisi baru, editor
+menyarankan <code>&lt;key&gt;.locale</code> sebagai nama berkas.</p>
+
+<div class="tip">
+	<p>Aplikasi menemukan bahasa-bahasanya di tempat yang sama dengan tabel bahasanya. Untuk menawarkan bahasa baru, sediakan berkas
+	<code>.locale</code> bersama dengan tabel bahasa untuk bahasa tersebut.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tools.html"><small>Sebelumnya</small>Alat</a>
+				<a class="next" href="settings.html"><small>Berikutnya</small>Pengaturan</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

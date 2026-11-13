@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>robbiblubber.org Localization Library</Title>
+    <Version>2.4.6</Version>
+    <Authors>Alexander Lang</Authors>
+    <Company>robbiblubber.org</Company>
+    <Product>robbiblubber.org Localization Library</Product>
+    <Description>The robbiblubber.org Localization Library provides locale definitions and language tables for applications.</Description>
+    <Copyright>© 2026 robbiblubber.org</Copyright>
+    <PackageProjectUrl>https://bitbucket.org/robbiblubber/robbiblubber.localization.net/</PackageProjectUrl>
+    <PackageIcon>nuget_robbiblubber.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <RepositoryUrl>https://bitbucket.org/robbiblubber/robbiblubber.localization.net/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>locale, localization</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook\Robbiblubber.Spellbook.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="nuget_robbiblubber.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

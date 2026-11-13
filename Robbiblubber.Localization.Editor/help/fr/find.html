@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rechercher et remplacer – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/find.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/find.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/find.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html" class="current">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Rechercher et remplacer</h1>
+
+<p class="lead">La fenêtre Rechercher parcourt les symboles et les textes de la table de langue active et, si vous le souhaitez,
+les remplace.</p>
+
+<h2>Ouvrir la fenêtre Rechercher</h2>
+
+<ul>
+	<li><span class="menu">Édition › Rechercher...</span> (<kbd>Ctrl</kbd>+<kbd>F</kbd>) ouvre la fenêtre pour une recherche.</li>
+	<li><span class="menu">Édition › Remplacer...</span> (<kbd>Ctrl</kbd>+<kbd>H</kbd>) l'ouvre avec le champ supplémentaire
+		<span class="ui">Remplacer par</span>. Dans la fenêtre, <kbd>Ctrl</kbd>+<kbd>F</kbd> et <kbd>Ctrl</kbd>+<kbd>H</kbd>
+		permettent de passer de l'un à l'autre.</li>
+	<li>Si une cellule est sélectionnée, son texte est proposé comme texte à rechercher ; si vous modifiez une cellule, c'est la
+		partie sélectionnée de son texte.</li>
+</ul>
+
+<p>La fenêtre reste au-dessus des fenêtres de l'éditeur et agit toujours sur la dernière fenêtre de table active. Il n'est pas
+possible de rechercher dans les définitions de langue. <kbd>Échap</kbd> ferme la fenêtre ; elle conserve ses textes, ses options
+et sa position pour la fois suivante.</p>
+
+<h2>Options</h2>
+
+<table>
+	<tr><th>Option</th><th>Effet</th></tr>
+	<tr><td><span class="ui">Chercher dans</span></td><td>Recherche dans la colonne <span class="ui">Symbole</span>, dans la colonne
+		<span class="ui">Texte</span> ou dans <span class="ui">Les deux</span>. Dans ce dernier cas, le symbole d'une ligne est
+		parcouru avant son texte.</td></tr>
+	<tr><td><span class="ui">Respecter la casse</span></td><td>Distingue les majuscules et les minuscules.</td></tr>
+	<tr><td><span class="ui">Mot entier</span></td><td>Ne trouve le texte recherché que s'il ne fait pas partie d'un mot plus
+		long.</td></tr>
+	<tr><td><span class="ui">Expressions régulières</span></td><td>Interprète le texte recherché comme une expression régulière (voir
+		ci-dessous).</td></tr>
+	<tr><td><span class="ui">Rechercher vers le haut</span></td><td>Recherche en direction du début de la table.</td></tr>
+</table>
+
+<h2>Rechercher</h2>
+
+<p><span class="ui">Suivant</span> (ou <kbd>Entrée</kbd>) sélectionne la cellule suivante qui contient le texte recherché. À la
+fin de la table, la recherche reprend au début ; la fenêtre l'indique dans sa barre d'état. Si rien n'est trouvé, un bip
+retentit.</p>
+
+<p>Les textes sont parcourus tels que la table les affiche : <code>\n</code> trouve donc les sauts de ligne.</p>
+
+<p>Il n'est pas nécessaire de garder la fenêtre ouverte : <span class="menu">Édition › Rechercher le suivant</span>
+(<kbd>F3</kbd>) et <kbd>Maj</kbd>+<kbd>F3</kbd> recherchent vers le bas et vers le haut avec le dernier texte recherché et les
+dernières options. Le résultat s'affiche dans la barre d'état de la fenêtre de la table.</p>
+
+<h2>Remplacer</h2>
+
+<ul>
+	<li><span class="ui">Remplacer</span> trouve d'abord la cellule suivante. Si vous cliquez à nouveau, toutes les occurrences de
+		cette cellule sont remplacées et la cellule suivante est trouvée : vous pouvez ainsi vérifier chaque cellule avant de
+		remplacer.</li>
+	<li><span class="ui">Remplacer tout</span> vous indique combien d'occurrences dans combien de lignes seront remplacées et vous
+		demande confirmation avant de le faire.</li>
+</ul>
+
+<div class="warn">
+	<p>Un remplacement ne peut pas être annulé. Enregistrez la table avant d'effectuer de nombreux remplacements.</p>
+</div>
+
+<h2>Expressions régulières</h2>
+
+<p>Avec <span class="ui">Expressions régulières</span>, le texte recherché est une expression régulière .NET. Quelques
+exemples :</p>
+
+<table>
+	<tr><th>Rechercher</th><th>Trouve</th></tr>
+	<tr><td><code>^menu\.</code></td><td>Les symboles qui commencent par <code>menu.</code></td></tr>
+	<tr><td><code>\.\.\.$</code></td><td>Les textes qui se terminent par <code>...</code></td></tr>
+	<tr><td><code>\$[A-Z]+</code></td><td>Les espaces réservés comme <code>$NAME</code></td></tr>
+	<tr><td><code>^$</code></td><td>Les cellules vides</td></tr>
+</table>
+
+<p>Dans <span class="ui">Remplacer par</span>, <code>$1</code>, <code>$2</code>, etc. insèrent les parties de la correspondance
+placées entre parenthèses. Par exemple, <code>^menu\.(\w+)$</code> remplacé par <code>main.$1</code> transforme
+<code>menu.file</code> en <code>main.file</code>. Sans expressions régulières, <code>$1</code> est inséré tel quel.</p>
+
+<p>Si l'expression n'est pas valide, la fenêtre en indique la raison. Une recherche qui prend trop de temps est annulée.</p>
+
+<h2>Historique</h2>
+
+<p>Les listes <span class="ui">Rechercher</span> et <span class="ui">Remplacer par</span> proposent les 10 derniers textes
+utilisés, et les options sont également conservées, même après un redémarrage.</p>
+			<div class="pager">
+				<a class="prev" href="editing.html"><small>Précédent</small>Édition et presse-papiers</a>
+				<a class="next" href="tools.html"><small>Suivant</small>Outils</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

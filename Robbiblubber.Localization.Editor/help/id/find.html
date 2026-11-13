@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cari dan ganti – Bantuan Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Bantuan Localization Editor</a>
+		<div class="languages"><a href="../en/find.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/find.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/find.html" hreflang="fr" lang="fr" title="Français">fr</a> <span title="Bahasa Indonesia">id</span></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Daftar Isi</h2>
+			<ul>
+				<li><a href="index.html">Mulai</a></li>
+				<li><a href="concepts.html">Dasar-dasar</a></li>
+				<li><a href="windows.html">Berkas dan jendela</a></li>
+				<li><a href="tables.html">Tabel bahasa</a></li>
+				<li><a href="editing.html">Pengeditan dan papan klip</a></li>
+				<li><a href="find.html" class="current">Cari dan ganti</a></li>
+				<li><a href="tools.html">Alat</a></li>
+				<li><a href="definitions.html">Definisi bahasa</a></li>
+				<li><a href="settings.html">Pengaturan</a></li>
+				<li><a href="shortcuts.html">Pintasan keyboard</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Cari dan ganti</h1>
+
+<p class="lead">Jendela Cari mencari simbol dan teks di tabel bahasa yang aktif dan menggantinya jika Anda menginginkannya.</p>
+
+<h2>Membuka jendela Cari</h2>
+
+<ul>
+	<li><span class="menu">Edit › Cari...</span> (<kbd>Ctrl</kbd>+<kbd>F</kbd>) membuka jendela untuk mencari.</li>
+	<li><span class="menu">Edit › Ganti...</span> (<kbd>Ctrl</kbd>+<kbd>H</kbd>) membukanya dengan kolom tambahan
+		<span class="ui">Ganti dengan</span>. Di dalam jendela, <kbd>Ctrl</kbd>+<kbd>F</kbd> dan <kbd>Ctrl</kbd>+<kbd>H</kbd>
+		beralih di antara keduanya.</li>
+	<li>Jika sebuah sel dipilih, teksnya disarankan sebagai teks pencarian; saat Anda sedang mengedit sel, bagian yang dipilih dari
+		sel tersebut.</li>
+</ul>
+
+<p>Jendela ini tetap berada di depan jendela editor dan selalu bekerja pada jendela tabel yang terakhir aktif. Definisi bahasa
+tidak dapat dicari. <kbd>Esc</kbd> menutup jendela; jendela tetap menyimpan teks, opsi, dan posisinya untuk lain kali.</p>
+
+<h2>Opsi</h2>
+
+<table>
+	<tr><th>Opsi</th><th>Efek</th></tr>
+	<tr><td><span class="ui">Cari di</span></td><td>Mencari di kolom <span class="ui">Simbol</span>, kolom
+		<span class="ui">Teks</span>, atau <span class="ui">Keduanya</span>. Jika keduanya, simbol sebuah baris dicari sebelum
+		teksnya.</td></tr>
+	<tr><td><span class="ui">Cocokkan huruf besar/kecil</span></td><td>Membedakan huruf besar dan kecil.</td></tr>
+	<tr><td><span class="ui">Hanya kata utuh</span></td><td>Hanya menemukan teks pencarian jika teks tersebut bukan bagian dari kata
+		yang lebih panjang.</td></tr>
+	<tr><td><span class="ui">Ekspresi reguler</span></td><td>Membaca teks pencarian sebagai ekspresi reguler (lihat di
+		bawah).</td></tr>
+	<tr><td><span class="ui">Cari mundur</span></td><td>Mencari ke arah awal tabel.</td></tr>
+</table>
+
+<h2>Mencari</h2>
+
+<p><span class="ui">Cari Berikutnya</span> (atau <kbd>Enter</kbd>) memilih sel berikutnya yang berisi teks pencarian. Di akhir
+tabel, pencarian dilanjutkan dari awal; jendela memberitahukannya di bilah statusnya. Jika tidak ada yang ditemukan, Anda
+mendengar bunyi bip.</p>
+
+<p>Teks dicari sebagaimana ditampilkan di tabel, sehingga <code>\n</code> menemukan baris baru.</p>
+
+<p>Anda tidak perlu membiarkan jendela tetap terbuka: <span class="menu">Edit › Cari Berikutnya</span> (<kbd>F3</kbd>) dan
+<kbd>Shift</kbd>+<kbd>F3</kbd> mencari maju dan mundur dengan teks pencarian dan opsi terakhir. Hasilnya muncul di bilah status
+jendela tabel.</p>
+
+<h2>Mengganti</h2>
+
+<ul>
+	<li><span class="ui">Ganti</span> pertama-tama menemukan sel berikutnya. Jika ditekan lagi, tombol ini mengganti semua
+		kemunculan di sel tersebut dan menemukan sel berikutnya, sehingga Anda dapat memeriksa setiap sel sebelum mengganti.</li>
+	<li><span class="ui">Ganti Semua</span> memberi tahu Anda berapa kemunculan di berapa baris yang akan diganti dan bertanya
+		terlebih dahulu sebelum melakukannya.</li>
+</ul>
+
+<div class="warn">
+	<p>Penggantian tidak dapat diurungkan. Simpan tabel sebelum Anda mengganti banyak hal.</p>
+</div>
+
+<h2>Ekspresi reguler</h2>
+
+<p>Dengan <span class="ui">Ekspresi reguler</span>, teks pencarian adalah ekspresi reguler .NET. Beberapa contoh:</p>
+
+<table>
+	<tr><th>Cari</th><th>Menemukan</th></tr>
+	<tr><td><code>^menu\.</code></td><td>Simbol yang diawali dengan <code>menu.</code></td></tr>
+	<tr><td><code>\.\.\.$</code></td><td>Teks yang diakhiri dengan <code>...</code></td></tr>
+	<tr><td><code>\$[A-Z]+</code></td><td>Placeholder seperti <code>$NAME</code></td></tr>
+	<tr><td><code>^$</code></td><td>Sel kosong</td></tr>
+</table>
+
+<p>Di <span class="ui">Ganti dengan</span>, <code>$1</code>, <code>$2</code>, dan seterusnya menyisipkan bagian-bagian hasil
+pencocokan yang berada dalam tanda kurung. Misalnya, <code>^menu\.(\w+)$</code> yang diganti dengan <code>main.$1</code> mengubah
+<code>menu.file</code> menjadi <code>main.file</code>. Tanpa ekspresi reguler, <code>$1</code> disisipkan apa adanya.</p>
+
+<p>Jika ekspresi tidak valid, jendela memberitahukan alasannya. Pencarian yang memakan waktu terlalu lama akan dibatalkan.</p>
+
+<h2>Riwayat</h2>
+
+<p>Daftar <span class="ui">Cari</span> dan <span class="ui">Ganti dengan</span> menawarkan 10 teks terakhir yang Anda gunakan, dan
+opsi juga tetap disimpan, bahkan setelah editor dimulai ulang.</p>
+			<div class="pager">
+				<a class="prev" href="editing.html"><small>Sebelumnya</small>Pengeditan dan papan klip</a>
+				<a class="next" href="tools.html"><small>Berikutnya</small>Alat</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

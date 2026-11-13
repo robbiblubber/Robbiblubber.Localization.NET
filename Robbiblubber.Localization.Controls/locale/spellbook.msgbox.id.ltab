@@ -1,0 +1,25 @@
+﻿cid = lang.def;
+version = 3.0;
+
+header
+{
+    author = robbiblubber.org;
+    key = lt.spellbook.msgbox;
+    lang = id;
+    name = spellbook.msgbox.id;
+    prefixes = spellbook;
+    version = 1.0;
+}
+
+data
+{
+    msgbox.abort = &Hentikan;
+    msgbox.cancel = Batal;
+    msgbox.continue = &Lanjutkan;
+    msgbox.ignore = &Abaikan;
+    msgbox.no = &Tidak;
+    msgbox.ok = OK;
+    msgbox.retry = &Ulangi;
+    msgbox.tryagain = &Coba lagi;
+    msgbox.yes = &Ya;
+}

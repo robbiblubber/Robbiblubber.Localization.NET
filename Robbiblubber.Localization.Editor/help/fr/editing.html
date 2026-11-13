@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Édition et presse-papiers – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/editing.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/editing.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/editing.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html" class="current">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Édition et presse-papiers</h1>
+
+<p class="lead">Les commandes du menu <span class="menu">Édition</span> fonctionnent où que vous soyez : dans un champ de l'en-tête,
+dans la table ou dans une cellule en cours de modification.</p>
+
+<h2>Commandes d'édition</h2>
+
+<table>
+	<tr><th>Commande</th><th>Raccourci</th><th>Dans la table</th></tr>
+	<tr><td><span class="menu">Annuler</span></td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>Uniquement pendant la modification d'une
+		cellule.</td></tr>
+	<tr><td><span class="menu">Couper</span></td><td><kbd>Ctrl</kbd>+<kbd>X</kbd></td><td>Copie les cellules sélectionnées et les
+		vide.</td></tr>
+	<tr><td><span class="menu">Copier</span></td><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Copie les cellules sélectionnées.</td></tr>
+	<tr><td><span class="menu">Coller</span></td><td><kbd>Ctrl</kbd>+<kbd>V</kbd></td><td>Colle à partir de la cellule active.</td></tr>
+	<tr><td><span class="menu">Supprimer</span></td><td><kbd>Suppr</kbd></td><td>Vide les cellules sélectionnées ou supprime les
+		lignes sélectionnées.</td></tr>
+	<tr><td><span class="menu">Tout sélectionner</span></td><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Sélectionne toutes les
+		cellules.</td></tr>
+</table>
+
+<p>Le menu n'active que les commandes possibles à ce moment-là, par exemple <span class="menu">Coller</span> uniquement si le
+presse-papiers contient quelque chose.</p>
+
+<h2>Copier et coller des cellules</h2>
+
+<ul>
+	<li>Vous pouvez copier plusieurs cellules à la fois. Elles sont placées dans le presse-papiers sous forme de texte, avec des
+		tabulations entre les colonnes et des sauts de ligne entre les lignes, ce qui permet de les coller dans Excel ou dans un
+		éditeur de texte.</li>
+	<li>Les cellules copiées dans Excel peuvent être collées dans la table de la même manière. Le bloc collé commence à la cellule
+		active.</li>
+	<li>Pour ajouter des entrées, copiez des lignes entières (sélectionnez les en-têtes de ligne), cliquez sur une cellule de la
+		dernière ligne, vide, puis collez. Si vous collez plus de lignes qu'il n'y en a sous la cellule active, les lignes
+		manquantes sont ajoutées.</li>
+</ul>
+
+<h2>Menus contextuels</h2>
+
+<p>Cliquez avec le bouton droit sur un champ de l'en-tête ou sur une cellule en cours de modification pour obtenir Annuler,
+Couper, Copier, Coller, Supprimer et Tout sélectionner pour ce champ. Cliquez avec le bouton droit sur la table pour obtenir les
+mêmes commandes pour les cellules sélectionnées, ainsi que l'<span class="menu">Éditeur de texte</span>.</p>
+
+<p>Si vous cliquez avec le bouton droit sur une cellule située hors de la sélection, cette cellule est d'abord sélectionnée. Si
+vous cliquez avec le bouton droit dans une sélection, celle-ci est conservée, et la commande s'applique à toutes les cellules ou
+lignes sélectionnées.</p>
+
+<h2>Annuler</h2>
+
+<div class="warn">
+	<p>Les modifications de la table elle-même, comme le collage, la suppression de lignes ou <span class="ui">Remplacer tout</span>,
+	ne peuvent pas encore être annulées. <span class="menu">Annuler</span> ne fonctionne que dans les champs de texte et pendant
+	la modification d'une cellule. Si vous vous apprêtez à faire des modifications importantes, enregistrez d'abord le fichier :
+	vous pourrez ainsi revenir en arrière en le rouvrant.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="tables.html"><small>Précédent</small>Tables de langue</a>
+				<a class="next" href="find.html"><small>Suivant</small>Rechercher et remplacer</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

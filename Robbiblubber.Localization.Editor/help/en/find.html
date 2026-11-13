@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find and replace – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/find.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/find.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/find.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html" class="current">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Find and replace</h1>
+
+<p class="lead">The Find window searches the symbols and texts of the active language table and replaces them if you want.</p>
+
+<h2>Opening the Find window</h2>
+
+<ul>
+	<li><span class="menu">Edit › Find...</span> (<kbd>Ctrl</kbd>+<kbd>F</kbd>) opens the window for searching.</li>
+	<li><span class="menu">Edit › Replace...</span> (<kbd>Ctrl</kbd>+<kbd>H</kbd>) opens it with the additional field
+		<span class="ui">Replace with</span>. In the window, <kbd>Ctrl</kbd>+<kbd>F</kbd> and <kbd>Ctrl</kbd>+<kbd>H</kbd> switch
+		between the two.</li>
+	<li>If a cell is selected, its text is suggested as search text; while you are editing a cell, the selected part of it.</li>
+</ul>
+
+<p>The window stays in front of the editor windows and always works on the table window that was active last. Locale definitions
+cannot be searched. <kbd>Esc</kbd> closes the window; it keeps its texts, options and position for the next time.</p>
+
+<h2>Options</h2>
+
+<table>
+	<tr><th>Option</th><th>Effect</th></tr>
+	<tr><td><span class="ui">Look in</span></td><td>Searches the <span class="ui">Symbol</span> column, the
+		<span class="ui">Text</span> column or <span class="ui">Both</span>. With both, the symbol of a row is searched before its
+		text.</td></tr>
+	<tr><td><span class="ui">Match case</span></td><td>Distinguishes upper and lower case.</td></tr>
+	<tr><td><span class="ui">Match whole word</span></td><td>Only finds the search text if it is not part of a longer word.</td></tr>
+	<tr><td><span class="ui">Regular expressions</span></td><td>Reads the search text as a regular expression (see below).</td></tr>
+	<tr><td><span class="ui">Search backwards</span></td><td>Searches towards the beginning of the table.</td></tr>
+</table>
+
+<h2>Finding</h2>
+
+<p><span class="ui">Find Next</span> (or <kbd>Enter</kbd>) selects the next cell that contains the search text. At the end of the
+table, the search continues at the beginning; the window says so in its status bar. If nothing is found, you hear a beep.</p>
+
+<p>Texts are searched as the table shows them, so <code>\n</code> finds line breaks.</p>
+
+<p>You do not need to keep the window open: <span class="menu">Edit › Find Next</span> (<kbd>F3</kbd>) and
+<kbd>Shift</kbd>+<kbd>F3</kbd> search forwards and backwards with the last search text and options. The result appears in the
+status bar of the table window.</p>
+
+<h2>Replacing</h2>
+
+<ul>
+	<li><span class="ui">Replace</span> first finds the next cell. Pressed again, it replaces all occurrences in that cell and
+		finds the next one, so you can check every cell before you replace.</li>
+	<li><span class="ui">Replace All</span> tells you how many occurrences in how many rows it will replace and asks before it
+		does so.</li>
+</ul>
+
+<div class="warn">
+	<p>Replacing cannot be undone. Save the table before you replace a lot.</p>
+</div>
+
+<h2>Regular expressions</h2>
+
+<p>With <span class="ui">Regular expressions</span>, the search text is a .NET regular expression. Some examples:</p>
+
+<table>
+	<tr><th>Find what</th><th>Finds</th></tr>
+	<tr><td><code>^menu\.</code></td><td>Symbols that begin with <code>menu.</code></td></tr>
+	<tr><td><code>\.\.\.$</code></td><td>Texts that end with <code>...</code></td></tr>
+	<tr><td><code>\$[A-Z]+</code></td><td>Placeholders such as <code>$NAME</code></td></tr>
+	<tr><td><code>^$</code></td><td>Empty cells</td></tr>
+</table>
+
+<p>In <span class="ui">Replace with</span>, <code>$1</code>, <code>$2</code> and so on insert the parts of the match in
+parentheses. For example, <code>^menu\.(\w+)$</code> replaced by <code>main.$1</code> turns <code>menu.file</code> into
+<code>main.file</code>. Without regular expressions, <code>$1</code> is inserted as it is.</p>
+
+<p>If the expression is not valid, the window says why. A search that takes too long is cancelled.</p>
+
+<h2>History</h2>
+
+<p>The <span class="ui">Find what</span> and <span class="ui">Replace with</span> lists offer the last 10 texts you used, and the
+options are kept as well, also after a restart.</p>
+			<div class="pager">
+				<a class="prev" href="editing.html"><small>Previous</small>Editing and clipboard</a>
+				<a class="next" href="tools.html"><small>Next</small>Tools</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

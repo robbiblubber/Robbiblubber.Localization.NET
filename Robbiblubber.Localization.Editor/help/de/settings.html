@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Einstellungen – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/settings.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/settings.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/settings.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html" class="current">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Einstellungen</h1>
+
+<p class="lead"><span class="menu">Extras › Einstellungen...</span> (<kbd>Strg</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd>) öffnet die
+Einstellungen des Editors.</p>
+
+<h2>Sprache des Editors</h2>
+
+<p>Wählen Sie unter <span class="ui">Umgebung › Sprachen</span> die <span class="ui">Sprache der Benutzeroberfläche</span>. Alle
+Fenster wechseln sofort, sodass Sie das Ergebnis gleich sehen. <span class="ui">OK</span> behält die neue Sprache;
+<span class="ui">Abbrechen</span> oder <kbd>Esc</kbd> kehrt zur vorherigen zurück. Der Editor merkt sich Ihre Wahl.</p>
+
+<p>Der Editor bringt English, Deutsch, Français und Bahasa Indonesia mit.</p>
+
+<h2>Eine Sprache zum Editor hinzufügen</h2>
+
+<p>Der Editor ist mit eigenen Dateien lokalisiert, Sie können ihn also selbst übersetzen:</p>
+
+<ol>
+	<li>Legen Sie eine Sprachdefinition für die Sprache an, zum Beispiel <code>es.locale</code>.</li>
+	<li>Öffnen Sie die englische Tabelle des Editors, <code>led.en.ltab</code> im Ordner <code>locale</code> neben
+		<code>led.exe</code>, speichern Sie sie als <code>led.es.ltab</code>, setzen Sie ihre <span class="ui">Sprache</span> auf
+		<code>es</code> und übersetzen Sie die Texte.</li>
+	<li>Legen Sie beide Dateien in den Ordner <code>locale</code> neben <code>led.exe</code> und starten Sie den Editor neu.</li>
+</ol>
+
+<p>Danach erscheint die neue Sprache in den Einstellungen. Texte, die in Ihrer Tabelle fehlen, werden auf Englisch angezeigt.</p>
+
+<h2>Darstellung</h2>
+
+<p>Wählen Sie unter <span class="ui">Umgebung › Darstellung</span> das <span class="ui">Theme</span> des Editors. Wie bei der
+Sprache wechseln alle Fenster sofort; <span class="ui">OK</span> behält das Theme, <span class="ui">Abbrechen</span> kehrt zum
+vorherigen zurück.</p>
+
+<table>
+	<tr><th>Theme</th><th>Farben</th></tr>
+	<tr><td><span class="ui">Automatisch</span></td><td>Hell oder dunkel, wie in den Windows-Einstellungen für Apps eingestellt; bei
+		hohem Kontrast die Windows-Farben</td></tr>
+	<tr><td><span class="ui">System</span></td><td>Die Windows-Farben, wie ohne Theme</td></tr>
+	<tr><td><span class="ui">Hell</span></td><td>Helle Farben</td></tr>
+	<tr><td><span class="ui">Dunkel</span></td><td>Dunkle Farben</td></tr>
+</table>
+
+<p>Ihre eigenen Themes folgen in der Liste auf die eingebauten.</p>
+
+<h3>Eigene Themes</h3>
+
+<p>Der Link <span class="ui">Anpassen...</span> neben der Liste öffnet den Theme-Editor. Legen Sie ein Theme mit
+<span class="ui">Neu</span> oder <span class="ui">Kopieren</span> an. Jedes Theme <span class="ui">Basiert auf</span> einem anderen
+und ändert nur die Farben, die Sie setzen: Wählen Sie eine Farbe und klicken Sie auf <span class="ui">Ändern...</span>;
+<span class="ui">Farbe zurücksetzen</span> übernimmt wieder die Farbe des Basis-Themes. Die Vorschau zeigt das Ergebnis sofort.
+<span class="ui">Importieren...</span> und <span class="ui">Exportieren...</span> tauschen Themes als <code>.theme</code>-Dateien
+aus, <span class="ui">Entfernen</span> löscht ein Theme. Die eingebauten Themes lassen sich nicht ändern.</p>
+
+<p>Schließen Sie den Theme-Editor mit <span class="ui">OK</span>, wird das dort gewählte Theme zum Theme des Editors, und Ihre
+Themes werden sofort gespeichert, auch wenn Sie die Einstellungen danach mit <span class="ui">Abbrechen</span> schließen.</p>
+
+<div class="note">
+	<p>Ihre Themes liegen in <code>%APPDATA%\robbiblubber\themes</code>. Andere Anwendungen von robbiblubber.org, die Themes
+	unterstützen, verwenden denselben Ordner: Ein Theme, das Sie hier anlegen, steht auch dort zur Verfügung, und umgekehrt. Jede
+	Anwendung merkt sich ihr eigenes gewähltes Theme.</p>
+</div>
+
+<h2>Gespeicherte Einstellungen</h2>
+
+<p>Der Editor speichert seine Einstellungen für jeden Benutzer unter <code>%LOCALAPPDATA%\robbiblubber.org\led</code>:</p>
+
+<table>
+	<tr><th>Datei</th><th>Inhalt</th></tr>
+	<tr><td><code>led.settings</code></td><td>Sprache des Editors, Suchverlauf und Suchoptionen</td></tr>
+	<tr><td><code>led.recent</code></td><td>Die Liste der zuletzt geöffneten Dateien</td></tr>
+	<tr><td><code>led.layout</code></td><td>Positionen und Größen der Fenster und Breiten der Tabellenspalten</td></tr>
+	<tr><td><code>led.themes</code></td><td>Das Theme des Editors</td></tr>
+</table>
+
+<div class="tip">
+	<p>Öffnet sich ein Fenster an einer unerwarteten Stelle, schließen Sie den Editor und löschen Sie <code>led.layout</code>. Alle
+	Fenster öffnen sich dann wieder an ihren Standardpositionen.</p>
+</div>
+			<div class="pager">
+				<a class="prev" href="definitions.html"><small>Zurück</small>Sprachdefinitionen</a>
+				<a class="next" href="shortcuts.html"><small>Weiter</small>Tastenkürzel</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

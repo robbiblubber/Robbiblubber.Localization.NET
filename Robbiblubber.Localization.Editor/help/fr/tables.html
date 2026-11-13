@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tables de langue – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/tables.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/tables.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/tables.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html" class="current">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Tables de langue</h1>
+
+<p class="lead">La fenêtre d'une table de langue affiche l'en-tête de la table en haut et ses entrées en dessous. La barre d'état,
+en bas, indique le nombre d'entrées et de problèmes ainsi que le nom du fichier.</p>
+
+<h2>En-tête</h2>
+
+<table>
+	<tr><th>Champ</th><th>Signification</th></tr>
+	<tr><td><span class="ui">Clé</span></td><td>Un identifiant de la table, par exemple <code>lt.app</code>. Elle ne sert pas à
+		rechercher les textes.</td></tr>
+	<tr><td><span class="ui">Langue</span></td><td>La clé de la langue à laquelle appartiennent les textes, par exemple
+		<code>de</code> ou <code>de-AT</code>. Sans langue, la table n'est utilisée pour aucune langue.</td></tr>
+	<tr><td><span class="ui">Nom</span></td><td>Un nom descriptif, par exemple <code>app.de</code>.</td></tr>
+	<tr><td><span class="ui">Version</span></td><td>La version de la table, par exemple <code>1.0</code>.</td></tr>
+	<tr><td><span class="ui">Préfixes</span></td><td>Un ou plusieurs préfixes, séparés par <code>;</code> ou <code>,</code> (voir
+		<a href="concepts.html">Notions de base</a>). Les espaces sont ignorés.</td></tr>
+	<tr><td><span class="ui">Auteur</span></td><td>La personne qui a créé la table.</td></tr>
+</table>
+
+<h2>Entrées</h2>
+
+<p>Chaque ligne de la table est une entrée composée d'un <span class="ui">Symbole</span> et d'un <span class="ui">Texte</span>.</p>
+
+<ul>
+	<li><strong>Ajouter :</strong> saisissez dans la dernière ligne, vide. Les lignes collées y sont également ajoutées (voir
+		<a href="editing.html">Édition et presse-papiers</a>).</li>
+	<li><strong>Modifier :</strong> sélectionnez une cellule et commencez à taper, appuyez sur <kbd>F2</kbd> ou cliquez une
+		nouvelle fois sur la cellule active. Appuyez sur <kbd>Entrée</kbd> pour valider la modification, sur <kbd>Échap</kbd>
+		pour l'abandonner.</li>
+	<li><strong>Textes longs :</strong> double-cliquez sur une cellule de texte ou appuyez sur <kbd>Ctrl</kbd>+<kbd>E</kbd> pour
+		modifier le texte dans l'<a href="tools.html">éditeur de texte</a>.</li>
+	<li><strong>Supprimer :</strong> sélectionnez des lignes entières en cliquant sur les en-têtes de ligne à gauche et appuyez sur
+		<kbd>Suppr</kbd>.</li>
+</ul>
+
+<p>L'ordre des lignes n'a pas d'importance. Le fichier est toujours enregistré trié par symbole ;
+<span class="menu">Outils › Trier</span> affiche les lignes dans cet ordre.</p>
+
+<h2>Sauts de ligne, tabulations et barres obliques inverses</h2>
+
+<p>La table affiche chaque texte sur une seule ligne. Les caractères spéciaux s'écrivent ainsi :</p>
+
+<table>
+	<tr><th>Dans la table</th><th>Signification</th></tr>
+	<tr><td><code>\n</code></td><td>Saut de ligne</td></tr>
+	<tr><td><code>\t</code></td><td>Tabulation</td></tr>
+	<tr><td><code>\\</code></td><td>Une barre oblique inverse, là où elle serait sinon lue comme <code>\n</code> ou
+		<code>\t</code>, par exemple <code>C:\\neu</code> pour <code>C:\neu</code>.</td></tr>
+</table>
+
+<p>Les autres barres obliques inverses restent telles quelles : <code>C:\Data</code> s'écrit simplement <code>C:\Data</code>. Dans
+l'<a href="tools.html">éditeur de texte</a>, en revanche, vous voyez et saisissez de vrais sauts de ligne et de vraies
+tabulations.</p>
+
+<h2>Problèmes</h2>
+
+<p>Les lignes qui présentent un problème reçoivent une marque rouge dans l'en-tête de ligne ; placez le pointeur dessus pour voir
+ce qui ne va pas. La barre d'état indique le nombre de ces lignes.</p>
+
+<table>
+	<tr><th>Problème</th><th>Conséquence</th></tr>
+	<tr><td>Texte sans symbole</td><td>La ligne n'est pas enregistrée.</td></tr>
+	<tr><td>Symbole présent plusieurs fois</td><td>Seule la dernière de ces lignes est enregistrée.</td></tr>
+	<tr><td>Symbole contenant un préfixe (<code>:</code>)</td><td>La ligne est enregistrée, mais l'application chercherait
+		<code>app:app:...</code>. Retirez le préfixe du symbole.</td></tr>
+</table>
+
+<p>Lorsque vous enregistrez une table qui présente des problèmes, l'éditeur les liste et vous demande s'il faut enregistrer quand
+même. Il vous avertit également si le champ <span class="ui">Langue</span> est vide.</p>
+
+<h2>Enregistrer les tables</h2>
+
+<p>Pour une nouvelle table, l'éditeur propose un nom de fichier composé du premier préfixe et de la langue, par exemple
+<code>app.de.ltab</code>. Dans la boîte de dialogue Enregistrer, vous pouvez choisir
+<span class="ui">Tables de langue compressées</span> pour enregistrer plutôt un fichier <code>.cltab</code>.</p>
+			<div class="pager">
+				<a class="prev" href="windows.html"><small>Précédent</small>Fichiers et fenêtres</a>
+				<a class="next" href="editing.html"><small>Suivant</small>Édition et presse-papiers</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿register
+{
+    name = Localization Editor;
+    icon = $INSTALLDIR\\led.exe,0;
+    publisher = robbiblubber.org;
+}
+
+install
+{
+    ltab
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Language Table;
+        extension = .ltab;
+        icon = $INSTALLDIR\\icons\\ltab.ico;
+    }
+
+    cltab
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Compressed Language Table;
+        extension = .cltab;
+        icon = $INSTALLDIR\\icons\\cltab.ico;
+    }
+
+    locale
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Locale Definition;
+        extension = .locale;
+        icon = $INSTALLDIR\\icons\\locale.ico;
+    }
+
+    desktop
+    {
+        action = link;
+        description = Localization Editor;
+        link = $DESKTOP\\Localization Editor.lnk;
+        target = $INSTALLDIR\\led.exe;
+    }
+
+    startmenu
+    {
+        action = link;
+        description = Localization Editor;
+        link = $START_MENU\\Programs\\Localization Editor.lnk;
+        target = $INSTALLDIR\\led.exe;
+    }
+}
+
+update
+{
+    ltab
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Language Table;
+        extension = .ltab;
+        icon = $INSTALLDIR\\icons\\ltab.ico;
+    }
+
+    cltab
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Compressed Language Table;
+        extension = .cltab;
+        icon = $INSTALLDIR\\icons\\cltab.ico;
+    }
+
+    locale
+    {
+        action = assoc;
+        application = $INSTALLDIR\\led.exe;
+        description = Locale Definition;
+        extension = .locale;
+        icon = $INSTALLDIR\\icons\\locale.ico;
+    }
+}
+
+uninstall
+{
+    ltab
+    {
+        action = rmassoc;
+        extension = .ltab;
+    }
+
+    cltab
+    {
+        action = rmassoc;
+        extension = .cltab;
+    }
+
+    locale
+    {
+        action = rmassoc;
+        extension = .locale;
+    }
+
+    links
+    {
+        action = rm;
+        target = $START_MENU\\Programs\\Localization Editor.lnk, $DESKTOP\\Localization Editor.lnk;
+    }
+}

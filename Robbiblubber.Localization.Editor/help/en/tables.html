@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Language tables – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/tables.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/tables.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/tables.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html" class="current">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Language tables</h1>
+
+<p class="lead">The window of a language table shows the header of the table at the top and its entries below. The status bar at
+the bottom shows the number of entries, problems and the file name.</p>
+
+<h2>Header</h2>
+
+<table>
+	<tr><th>Field</th><th>Meaning</th></tr>
+	<tr><td><span class="ui">Key</span></td><td>An identifier of the table, for example <code>lt.app</code>. It is not used to look
+		up texts.</td></tr>
+	<tr><td><span class="ui">Locale</span></td><td>The key of the locale the texts belong to, for example <code>de</code> or
+		<code>de-AT</code>. Without a locale, the table is not used for any language.</td></tr>
+	<tr><td><span class="ui">Name</span></td><td>A descriptive name, for example <code>app.de</code>.</td></tr>
+	<tr><td><span class="ui">Version</span></td><td>The version of the table, for example <code>1.0</code>.</td></tr>
+	<tr><td><span class="ui">Prefixes</span></td><td>One or more prefixes, separated by <code>;</code> or <code>,</code> (see
+		<a href="concepts.html">Basics</a>). Blanks are ignored.</td></tr>
+	<tr><td><span class="ui">Author</span></td><td>Who made the table.</td></tr>
+</table>
+
+<h2>Entries</h2>
+
+<p>Each row of the table is one entry with a <span class="ui">Symbol</span> and a <span class="ui">Text</span>.</p>
+
+<ul>
+	<li><strong>Add:</strong> type into the empty last row. Pasted rows are added there as well (see
+		<a href="editing.html">Editing and clipboard</a>).</li>
+	<li><strong>Edit:</strong> select a cell and start typing, press <kbd>F2</kbd>, or click the current cell once more. Press
+		<kbd>Enter</kbd> to take the change over, <kbd>Esc</kbd> to discard it.</li>
+	<li><strong>Long texts:</strong> double-click a text cell or press <kbd>Ctrl</kbd>+<kbd>E</kbd> to edit the text in the
+		<a href="tools.html">text editor</a>.</li>
+	<li><strong>Delete:</strong> select whole rows by clicking the row headers at the left and press <kbd>Del</kbd>.</li>
+</ul>
+
+<p>The order of the rows does not matter. The file is always saved sorted by symbol; <span class="menu">Tools › Sort</span> shows
+the rows in this order.</p>
+
+<h2>Line breaks, tabs and backslashes</h2>
+
+<p>The table shows every text in one line. Special characters are written like this:</p>
+
+<table>
+	<tr><th>In the table</th><th>Meaning</th></tr>
+	<tr><td><code>\n</code></td><td>Line break</td></tr>
+	<tr><td><code>\t</code></td><td>Tab</td></tr>
+	<tr><td><code>\\</code></td><td>A backslash, where it would otherwise be read as <code>\n</code> or <code>\t</code>, for
+		example <code>C:\\neu</code> for <code>C:\neu</code>.</td></tr>
+</table>
+
+<p>Other backslashes stay as they are: <code>C:\Data</code> is simply <code>C:\Data</code>. In the
+<a href="tools.html">text editor</a> you see and enter real line breaks and tabs instead.</p>
+
+<h2>Problems</h2>
+
+<p>Rows with a problem get a red mark in the row header; point at it to see what is wrong. The status bar shows the number of such
+rows.</p>
+
+<table>
+	<tr><th>Problem</th><th>What happens</th></tr>
+	<tr><td>Text without symbol</td><td>The row is not saved.</td></tr>
+	<tr><td>Symbol occurs more than once</td><td>Only the last of these rows is saved.</td></tr>
+	<tr><td>Symbol contains a prefix (<code>:</code>)</td><td>The row is saved, but the application would look for
+		<code>app:app:...</code>. Remove the prefix from the symbol.</td></tr>
+</table>
+
+<p>When you save a table with problems, the editor lists them and asks whether to save anyway. It also warns you if the
+<span class="ui">Locale</span> field is empty.</p>
+
+<h2>Saving tables</h2>
+
+<p>For a new table, the editor suggests a file name made of the first prefix and the locale, for example
+<code>app.de.ltab</code>. In the Save dialog you can choose <span class="ui">Compressed Language Tables</span> to save a
+<code>.cltab</code> file instead.</p>
+			<div class="pager">
+				<a class="prev" href="windows.html"><small>Previous</small>Files and windows</a>
+				<a class="next" href="editing.html"><small>Next</small>Editing and clipboard</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

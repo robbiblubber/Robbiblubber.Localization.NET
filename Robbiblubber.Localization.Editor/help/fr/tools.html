@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Outils – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/tools.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/tools.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/tools.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html" class="current">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Outils</h1>
+
+<p class="lead">Le menu <span class="menu">Outils</span> vous aide à travailler sur les textes longs et à garder plusieurs tables
+à jour les unes par rapport aux autres. Les outils sont disponibles dans les fenêtres des tables de langue.</p>
+
+<h2>Éditeur de texte</h2>
+
+<p>L'éditeur de texte affiche un texte avec de vrais sauts de ligne et de vraies tabulations, ce qui facilite la lecture et
+l'écriture des textes longs. Pour l'ouvrir, utilisez :</p>
+
+<ul>
+	<li><span class="menu">Outils › Éditeur de texte...</span> ou <kbd>Ctrl</kbd>+<kbd>E</kbd>,</li>
+	<li>un double-clic sur une cellule de texte, ou</li>
+	<li><span class="menu">Éditeur de texte...</span> dans le menu contextuel de la table.</li>
+</ul>
+
+<p>L'éditeur modifie toujours le texte de la ligne active, même si c'est la cellule du symbole qui est sélectionnée ; son titre
+affiche le symbole.</p>
+
+<table>
+	<tr><th>Touche</th><th>Effet</th></tr>
+	<tr><td><kbd>Entrée</kbd></td><td>Nouvelle ligne</td></tr>
+	<tr><td><kbd>Tab</kbd></td><td>Tabulation</td></tr>
+	<tr><td><kbd>Ctrl</kbd>+<kbd>Entrée</kbd> ou <span class="ui">OK</span></td><td>Valide le texte</td></tr>
+	<tr><td><kbd>Échap</kbd> ou <span class="ui">Annuler</span></td><td>Ferme l'éditeur sans modifier le texte</td></tr>
+	<tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Sélectionne tout le texte</td></tr>
+</table>
+
+<p>Dans la dernière ligne, vide, l'éditeur de texte ajoute une nouvelle ligne avec votre texte ; saisissez ensuite son symbole.
+L'éditeur conserve sa taille pour la fois suivante.</p>
+
+<h2>Trier</h2>
+
+<p><span class="menu">Outils › Trier</span> trie les lignes par symbole, dans l'ordre dans lequel le fichier est enregistré : les
+majuscules viennent avant les minuscules, et les nombres contenus dans les symboles sont comparés selon leur valeur
+(<code>item2</code> avant <code>item10</code>). Les lignes sans symbole sont placées à la fin.</p>
+
+<p>Comme le fichier est toujours enregistré dans cet ordre, le tri ne compte pas comme une modification.</p>
+
+<h2>Importer</h2>
+
+<p><span class="menu">Outils › Importer...</span> reprend les entrées d'une autre table de langue dont les symboles manquent dans
+la table active. Utilisez cette commande pour</p>
+
+<ul>
+	<li>commencer une nouvelle langue : créez une table vide et importez la table d'une langue existante, puis traduisez les
+		textes ;</li>
+	<li>mettre une traduction à jour : importez la table de la langue d'origine pour obtenir toutes les entrées ajoutées
+		depuis.</li>
+</ul>
+
+<p>Les lignes importées sont ajoutées à la fin de la table avec les textes de l'autre table et sont sélectionnées, pour que vous
+voyiez ce qui est nouveau. Les lignes existantes et l'en-tête ne sont jamais modifiés. Si rien ne manque, l'éditeur vous
+l'indique.</p>
+			<div class="pager">
+				<a class="prev" href="find.html"><small>Précédent</small>Rechercher et remplacer</a>
+				<a class="next" href="definitions.html"><small>Suivant</small>Définitions de langue</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

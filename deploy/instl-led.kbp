@@ -1,0 +1,190 @@
+﻿additional = C:\\home\\projects\\Robbiblubber.Localization.NET\\deploy\\*.ltab, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , C:\\home\\projects\\Robbiblubber.Localization.NET\\deploy\\license.html;
+author = robbiblubber.org;
+closeimmediately = false;
+copyright = © 2024 robbiblubber.org;
+credentials = 2;
+debug = false;
+defaultpath = $ProgramFiles\\robbiblubber.org\\led;
+description = The robbiblubber.org Localization Editor.;
+description.symbol = instl-led:descr;
+icon = $InstallDirectory\\led.exe;
+key = led;
+localized = true;
+minimum = ;
+name = Localization Editor;
+name.symbol = instl-led:name;
+out = C:\\home\\projects\\Robbiblubber.Localization.NET\\deploy\\out;
+register = true;
+repository = https:\/\/robbiblubber.org\/instll;
+temp = C:\\home\\projects\\Robbiblubber.Localization.NET\\deploy\\temp;
+version = 2.0.2;
+
+led-addlang
+{
+    autodependency = false;
+    comment = ;
+    description = This package contains additional language support packs.\nSelect this to install all language definitions available.;
+    description.symbol = instl-led:addlang.descr;
+    name = Additional Language Support;
+    name.symbol = instl-led:addlang;
+    ordinal = 0;
+    parent = led-main;
+    selectable = true;
+    selected = true;
+    type = package;
+    visible = true;
+
+    wxdVLaTEcUjkrZo65bJdAWQW
+    {
+        comment = ;
+        condition = ;
+        destination = $InstallDirectory\\locale;
+        files = C:\\home\\projects\\Robbiblubber.Localization.NET\\res\\addloacle\\*.*;
+        install = true;
+        ordinal = 0;
+        type = execution:copy;
+        uninstall = true;
+        update = true;
+        xorder = 20;
+    }
+}
+
+led-desktop
+{
+    autodependency = false;
+    comment = ;
+    description = This package will create an icon for the robbiblubber.org Localization Editor on your desktop.;
+    description.symbol = ;
+    name = Desktop Icon;
+    name.symbol = instl-led:desktop;
+    ordinal = 1;
+    selectable = true;
+    selected = true;
+    type = package;
+    visible = true;
+
+    uCjyLaTDodFzUA3xwV9ROhxn
+    {
+        args = ;
+        comment = ;
+        condition = ;
+        description = The robbiblubber.org Localization Editor.;
+        description.symbol = instl-led:link.descr;
+        icon = $InstallDirectory\\led.exe;
+        iconindex = 0;
+        install = true;
+        linkfile = $CommonDesktop\\Localization Editor.lnk;
+        linkfile.symbol = instl-led:link.desktop;
+        ordinal = 0;
+        target = $InstallDirectory\\led.exe;
+        type = execution:shortcut;
+        uninstall = true;
+        update = false;
+        xorder = 40;
+    }
+}
+
+led-install
+{
+    comment = ;
+    description = The installer is ready to install the robbiblubber.org Localization Editor.\nPlease click 'Install' to begin the installation process.;
+    description.symbol = instl-led:install.descr;
+    name = Installation;
+    name.symbol = instl-led:install;
+    ordinal = 2;
+    text = ;
+    text.symbol = ;
+    type = step:text;
+}
+
+led-lic
+{
+    comment = ;
+    confirmtext = ;
+    confirmtext.symbol = ;
+    description = Please take a moment to read the license agreement.\nThe robbiblubber.org Localization Editor is provided under the MIT license. By continuing the installation the application you accept the terms of this license agreement.;
+    description.symbol = instl-led:lic.descr;
+    file = $InstallSource\\license.html;
+    file.symbol = instl-led:licfile;
+    mustconfirm = false;
+    name = License Agreement;
+    name.symbol = instl-led:lic;
+    ordinal = 1;
+    type = step:displayfile;
+}
+
+led-main
+{
+    autodependency = false;
+    comment = ;
+    description = This package contains the required components for the robbiblubber.org Localization Editor.\nYou cannot exclude this package from the installation.;
+    description.symbol = instl-led:main.descr;
+    name = Localization Editor;
+    name.symbol = instl-led:main;
+    ordinal = 0;
+    selectable = false;
+    selected = true;
+    type = package;
+    visible = true;
+
+    EG8dLaTDlbEh20wgsFemWJOX
+    {
+        comment = ;
+        condition = ;
+        destination = $InstallDirectory;
+        files = C:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\*.exe\nC:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\*.dll\nC:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\*.json\nC:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\*.txt\nC:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\*.md\nC:\\home\\projects\\Robbiblubber.Localization.NET\\Robbiblubber.Localization.Editor\\bin\\Release\\net8.0-windows\\locale\\;
+        install = true;
+        ordinal = 0;
+        type = execution:copy;
+        uninstall = true;
+        update = true;
+        xorder = 10;
+    }
+}
+
+led-pkg
+{
+    comment = ;
+    description = This will install the robbiblubber.org Localization Editor on your computer.\n\nPlease select the features you want to install.;
+    description.symbol = instl-led:pksel.descr;
+    name = Select Packages;
+    name.symbol = instl-led:pkgsel;
+    ordinal = 0;
+    selectpath = true;
+    type = step:packageselection;
+}
+
+led-programs
+{
+    autodependency = false;
+    comment = ;
+    description = This package will create links in your Start Menu programs selection.;
+    description.symbol = instl-led:programs.descr;
+    name = Links in Programs;
+    name.symbol = instl-led:programs;
+    ordinal = 2;
+    selectable = true;
+    selected = true;
+    type = package;
+    visible = true;
+
+    V4lELaTDqbruLWjGuNUVXMoM
+    {
+        args = ;
+        comment = ;
+        condition = ;
+        description = The robbiblubber.org Localization Editor.;
+        description.symbol = instl-led:link.descr;
+        icon = $InstallDirectory\\led.exe;
+        iconindex = 0;
+        install = true;
+        linkfile = $CommonPrograms\\Localization Editor.lnk;
+        linkfile.symbol = instl-led:link.programs;
+        ordinal = 0;
+        target = $InstallDirectory\\led.exe;
+        type = execution:shortcut;
+        uninstall = true;
+        update = false;
+        xorder = 50;
+    }
+}

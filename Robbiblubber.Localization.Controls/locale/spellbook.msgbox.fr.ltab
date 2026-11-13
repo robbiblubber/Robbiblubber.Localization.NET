@@ -1,0 +1,25 @@
+﻿cid = lang.def;
+version = 3.0;
+
+header
+{
+    author = robbiblubber.org;
+    key = lt.spellbook.msgbox;
+    lang = fr;
+    name = spellbook.msgbox.fr;
+    prefixes = spellbook;
+    version = 1.0;
+}
+
+data
+{
+    msgbox.abort = &Abandonner;
+    msgbox.cancel = Annuler;
+    msgbox.continue = &Continuer;
+    msgbox.ignore = &Ignorer;
+    msgbox.no = &Non;
+    msgbox.ok = OK;
+    msgbox.retry = &Recommencer;
+    msgbox.tryagain = &Réessayer;
+    msgbox.yes = &Oui;
+}

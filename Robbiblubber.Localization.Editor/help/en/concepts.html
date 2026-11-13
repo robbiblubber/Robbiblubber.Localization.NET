@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basics – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/concepts.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/concepts.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/concepts.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html" class="current">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Basics</h1>
+
+<p class="lead">This page explains how an application finds its texts and what that means for the files you edit.</p>
+
+<h2>Locales</h2>
+
+<p>A <strong>locale</strong> is a language, possibly for a region. Each locale has a short <strong>key</strong>, for example
+<code>en</code> for English, <code>de</code> for German or <code>de-AT</code> for German in Austria. A <strong>locale
+definition</strong> (<code>.locale</code>) describes a locale: its key, its name as shown to the user, its icons and a few
+settings. See <a href="definitions.html">Locale definitions</a>.</p>
+
+<p>A locale can have a <strong>base locale</strong>. A locale <code>de-AT</code> based on <code>de</code> only needs the texts
+that differ in Austria; all other texts are taken from <code>de</code>.</p>
+
+<h2>Language tables</h2>
+
+<p>A <strong>language table</strong> (<code>.ltab</code> or <code>.cltab</code>) contains the texts of one locale for an
+application or a part of it. The <span class="ui">Locale</span> field in the header of the table says which locale the texts
+belong to. An application usually has one table per language, for example <code>app.en.ltab</code>, <code>app.de.ltab</code> and
+<code>app.fr.ltab</code>, each with the same symbols.</p>
+
+<h2>Symbols and texts</h2>
+
+<p>Each entry of a table has a <strong>symbol</strong> and a <strong>text</strong>. The symbol is the name the application uses to
+ask for a text; it is the same in all languages. The text is the translation. Symbols usually consist of words separated by
+dots, for example <code>menu.file.open</code> or <code>message.saved</code>. Upper and lower case matter: <code>Save</code> and
+<code>save</code> are two different symbols.</p>
+
+<h2>Prefixes</h2>
+
+<p>The <strong>prefix</strong> keeps the symbols of different applications or components apart. The application asks for a text
+as <code>prefix:symbol</code>, for example <code>app:menu.file.open</code>. In the table you only enter the symbol
+(<code>menu.file.open</code>) and the prefix once in the header. A table with several prefixes provides its symbols under each
+of them; a table without prefix provides them as they are.</p>
+
+<div class="note">
+	<p>Do not write the prefix in front of the symbols in the table. The editor marks such rows as a problem, because the table
+	already puts its prefix in front of them.</p>
+</div>
+
+<h2>Placeholders</h2>
+
+<p>Texts can contain placeholders: a <code>$</code> followed by a name in capital letters, for example <code>$NAME</code> in
+<code>$NAME has been saved.</code> The application replaces them with a value. Keep placeholders unchanged when you translate a
+text; you may move them to another position in the sentence.</p>
+
+<h2>Access keys</h2>
+
+<p>In texts for menus, buttons and labels, an <code>&amp;</code> marks the letter that is underlined and can be used with
+<kbd>Alt</kbd>, for example <code>&amp;Open...</code>. Within one menu or window, every letter should be used only once. To show
+an <code>&amp;</code> itself, write <code>&amp;&amp;</code>.</p>
+
+<h2>What happens if a text is missing</h2>
+
+<p>If the table of the current locale does not contain a symbol, the application uses the text of the base locale or a text built
+into the application, usually the English one. A missing entry therefore does not cause an error, but the user sees an
+untranslated text.</p>
+
+<p>If the same symbol occurs twice for the same locale, the later one wins. The editor warns you about such duplicates, both in
+the table and when it opens a file.</p>
+			<div class="pager">
+				<a class="prev" href="index.html"><small>Previous</small>Start</a>
+				<a class="next" href="windows.html"><small>Next</small>Files and windows</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

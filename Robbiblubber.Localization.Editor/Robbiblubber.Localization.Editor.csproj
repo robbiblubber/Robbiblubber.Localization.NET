@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net8.0-windows;net10.0-windows</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <RootNamespace>Robbiblubber.Localization.Editor</RootNamespace>
+    <AssemblyName>led</AssemblyName>
+    <ApplicationIcon>led4.ico</ApplicationIcon>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationVisualStyles>true</ApplicationVisualStyles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Robbiblubber.Localization\Properties\AssemblyVersion.cs" Link="Properties\AssemblyVersion.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="led4.ico" />
+    <None Update="help\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="icons\*.ico" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="install.kroo" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\res\de.locale" Link="locale\de.locale" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\en.locale" Link="locale\en.locale" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\fr.locale" Link="locale\fr.locale" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\id.locale" Link="locale\id.locale" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\led.de.ltab" Link="locale\led.de.ltab" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\led.en.ltab" Link="locale\led.en.ltab" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\led.fr.ltab" Link="locale\led.fr.ltab" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\res\led.id.ltab" Link="locale\led.id.ltab" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook.Controls\Robbiblubber.Spellbook.Controls.csproj" />
+    <ProjectReference Include="..\..\Robbiblubber.Spellbook.NET\Robbiblubber.Spellbook\Robbiblubber.Spellbook.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization.Controls\Robbiblubber.Localization.Controls.csproj" />
+    <ProjectReference Include="..\Robbiblubber.Localization\Robbiblubber.Localization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

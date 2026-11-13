@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tools – Localization Editor Help</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Localization Editor Help</a>
+		<div class="languages"><span title="English">en</span> <a href="../de/tools.html" hreflang="de" lang="de" title="Deutsch">de</a> <a href="../fr/tools.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/tools.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Contents</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Basics</a></li>
+				<li><a href="windows.html">Files and windows</a></li>
+				<li><a href="tables.html">Language tables</a></li>
+				<li><a href="editing.html">Editing and clipboard</a></li>
+				<li><a href="find.html">Find and replace</a></li>
+				<li><a href="tools.html" class="current">Tools</a></li>
+				<li><a href="definitions.html">Locale definitions</a></li>
+				<li><a href="settings.html">Settings</a></li>
+				<li><a href="shortcuts.html">Keyboard shortcuts</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Tools</h1>
+
+<p class="lead">The <span class="menu">Tools</span> menu helps with long texts and with keeping several tables in step. The tools
+are available in language table windows.</p>
+
+<h2>Text editor</h2>
+
+<p>The text editor shows a text with real line breaks and tabs, which makes longer texts easier to read and write. Open it
+with:</p>
+
+<ul>
+	<li><span class="menu">Tools › Text Editor...</span> or <kbd>Ctrl</kbd>+<kbd>E</kbd>,</li>
+	<li>a double-click on a text cell, or</li>
+	<li><span class="menu">Text Editor...</span> in the context menu of the table.</li>
+</ul>
+
+<p>The editor always edits the text of the current row, also if the symbol cell is selected; its title shows the symbol.</p>
+
+<table>
+	<tr><th>Key</th><th>Effect</th></tr>
+	<tr><td><kbd>Enter</kbd></td><td>New line</td></tr>
+	<tr><td><kbd>Tab</kbd></td><td>Tab</td></tr>
+	<tr><td><kbd>Ctrl</kbd>+<kbd>Enter</kbd> or <span class="ui">OK</span></td><td>Takes the text over</td></tr>
+	<tr><td><kbd>Esc</kbd> or <span class="ui">Cancel</span></td><td>Closes the editor without changing the text</td></tr>
+	<tr><td><kbd>Ctrl</kbd>+<kbd>A</kbd></td><td>Selects the whole text</td></tr>
+</table>
+
+<p>In the empty last row, the text editor adds a new row with your text; enter its symbol afterwards. The editor keeps its size
+for the next time.</p>
+
+<h2>Sort</h2>
+
+<p><span class="menu">Tools › Sort</span> sorts the rows by symbol, in the order in which the file is saved: capital letters
+come before small letters, and numbers within symbols are compared by value (<code>item2</code> before <code>item10</code>). Rows
+without symbol go to the end.</p>
+
+<p>Since the file is always saved in this order, sorting does not count as a change.</p>
+
+<h2>Import</h2>
+
+<p><span class="menu">Tools › Import...</span> takes over the entries of another language table whose symbols are missing in the
+current table. Use it to</p>
+
+<ul>
+	<li>start a new language: create an empty table and import the table of an existing language, then translate the texts;</li>
+	<li>bring a translation up to date: import the table of the original language to get all entries that have been added
+		since.</li>
+</ul>
+
+<p>Imported rows are added at the end of the table with the texts of the other table and are selected, so you can see what is
+new. Existing rows and the header are never changed. If nothing is missing, the editor tells you so.</p>
+			<div class="pager">
+				<a class="prev" href="find.html"><small>Previous</small>Find and replace</a>
+				<a class="next" href="definitions.html"><small>Next</small>Locale definitions</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

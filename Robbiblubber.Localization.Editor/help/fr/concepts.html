@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Notions de base – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/concepts.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/concepts.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/concepts.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html">Accueil</a></li>
+				<li><a href="concepts.html" class="current">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Notions de base</h1>
+
+<p class="lead">Cette page explique comment une application trouve ses textes et ce que cela implique pour les fichiers que vous
+modifiez.</p>
+
+<h2>Langues</h2>
+
+<p>Une <strong>langue</strong> peut aussi être propre à une région. Chaque langue a une courte <strong>clé</strong>, par exemple
+<code>en</code> pour l'anglais, <code>de</code> pour l'allemand ou <code>de-AT</code> pour l'allemand d'Autriche. Une
+<strong>définition de langue</strong> (<code>.locale</code>) décrit une langue : sa clé, son nom tel qu'il est présenté à
+l'utilisateur, ses icônes et quelques réglages. Voir <a href="definitions.html">Définitions de langue</a>.</p>
+
+<p>Une langue peut avoir une <strong>langue de base</strong>. Une langue <code>de-AT</code> basée sur <code>de</code> n'a besoin
+que des textes qui diffèrent en Autriche ; tous les autres textes sont repris de <code>de</code>.</p>
+
+<h2>Tables de langue</h2>
+
+<p>Une <strong>table de langue</strong> (<code>.ltab</code> ou <code>.cltab</code>) contient les textes d'une langue pour une
+application ou une partie de celle-ci. Le champ <span class="ui">Langue</span> de l'en-tête indique à quelle langue appartiennent
+les textes. Une application a généralement une table par langue, par exemple <code>app.en.ltab</code>, <code>app.de.ltab</code>
+et <code>app.fr.ltab</code>, chacune avec les mêmes symboles.</p>
+
+<h2>Symboles et textes</h2>
+
+<p>Chaque entrée d'une table a un <strong>symbole</strong> et un <strong>texte</strong>. Le symbole est le nom sous lequel
+l'application demande un texte ; il est identique dans toutes les langues. Le texte est la traduction. Les symboles se composent
+généralement de mots séparés par des points, par exemple <code>menu.file.open</code> ou <code>message.saved</code>. Les
+majuscules et les minuscules comptent : <code>Save</code> et <code>save</code> sont deux symboles différents.</p>
+
+<h2>Préfixes</h2>
+
+<p>Le <strong>préfixe</strong> permet de distinguer les symboles de différentes applications ou de différents composants.
+L'application demande un texte sous la forme <code>prefix:symbol</code>, par exemple <code>app:menu.file.open</code>. Dans la
+table, vous saisissez uniquement le symbole (<code>menu.file.open</code>), et le préfixe une seule fois dans l'en-tête. Une table
+avec plusieurs préfixes fournit ses symboles sous chacun d'eux ; une table sans préfixe les fournit tels quels.</p>
+
+<div class="note">
+	<p>N'écrivez pas le préfixe devant les symboles dans la table. L'éditeur signale ces lignes comme un problème, car la table
+	place déjà son préfixe devant eux.</p>
+</div>
+
+<h2>Espaces réservés</h2>
+
+<p>Les textes peuvent contenir des espaces réservés : un <code>$</code> suivi d'un nom en majuscules, par exemple
+<code>$NAME</code> dans <code>$NAME has been saved.</code> L'application les remplace par une valeur. Conservez les espaces
+réservés tels quels lorsque vous traduisez un texte ; vous pouvez les déplacer à un autre endroit de la phrase.</p>
+
+<h2>Touches d'accès</h2>
+
+<p>Dans les textes des menus, des boutons et des libellés, un <code>&amp;</code> désigne la lettre qui est soulignée et peut être
+utilisée avec <kbd>Alt</kbd>, par exemple <code>&amp;Open...</code>. Dans un même menu ou une même fenêtre, chaque lettre ne
+devrait être utilisée qu'une seule fois. Pour afficher un <code>&amp;</code>, écrivez <code>&amp;&amp;</code>.</p>
+
+<h2>Que se passe-t-il si un texte manque ?</h2>
+
+<p>Si la table de la langue actuelle ne contient pas un symbole, l'application utilise le texte de la langue de base ou un texte
+intégré à l'application, généralement le texte anglais. Une entrée manquante ne provoque donc pas d'erreur, mais l'utilisateur
+voit un texte non traduit.</p>
+
+<p>Si le même symbole apparaît deux fois pour la même langue, c'est le dernier qui l'emporte. L'éditeur vous signale ces doublons,
+aussi bien dans la table qu'à l'ouverture d'un fichier.</p>
+			<div class="pager">
+				<a class="prev" href="index.html"><small>Précédent</small>Accueil</a>
+				<a class="next" href="windows.html"><small>Suivant</small>Fichiers et fenêtres</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

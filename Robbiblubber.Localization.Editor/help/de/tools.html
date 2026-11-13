@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Extras – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/tools.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/tools.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/tools.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html" class="current">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Extras</h1>
+
+<p class="lead">Das Menü <span class="menu">Extras</span> hilft bei langen Texten und dabei, mehrere Tabellen auf demselben Stand
+zu halten. Die Befehle stehen in Fenstern von Sprachtabellen zur Verfügung.</p>
+
+<h2>Texteditor</h2>
+
+<p>Der Texteditor zeigt einen Text mit echten Zeilenumbrüchen und Tabulatoren; so lassen sich längere Texte leichter lesen und
+schreiben. Sie öffnen ihn mit</p>
+
+<ul>
+	<li><span class="menu">Extras › Texteditor...</span> oder <kbd>Strg</kbd>+<kbd>E</kbd>,</li>
+	<li>einem Doppelklick auf eine Textzelle oder</li>
+	<li><span class="menu">Texteditor...</span> im Kontextmenü der Tabelle.</li>
+</ul>
+
+<p>Der Texteditor bearbeitet immer den Text der aktuellen Zeile, auch wenn die Symbolzelle markiert ist; sein Titel zeigt das
+Symbol.</p>
+
+<table>
+	<tr><th>Taste</th><th>Wirkung</th></tr>
+	<tr><td><kbd>Eingabe</kbd></td><td>Neue Zeile</td></tr>
+	<tr><td><kbd>Tab</kbd></td><td>Tabulator</td></tr>
+	<tr><td><kbd>Strg</kbd>+<kbd>Eingabe</kbd> oder <span class="ui">OK</span></td><td>Übernimmt den Text</td></tr>
+	<tr><td><kbd>Esc</kbd> oder <span class="ui">Abbrechen</span></td><td>Schließt den Texteditor, ohne den Text zu ändern</td></tr>
+	<tr><td><kbd>Strg</kbd>+<kbd>A</kbd></td><td>Markiert den ganzen Text</td></tr>
+</table>
+
+<p>In der leeren letzten Zeile legt der Texteditor eine neue Zeile mit Ihrem Text an; das Symbol tragen Sie danach ein. Der
+Texteditor merkt sich seine Größe für das nächste Mal.</p>
+
+<h2>Sortieren</h2>
+
+<p><span class="menu">Extras › Sortieren</span> sortiert die Zeilen nach Symbol, in der Reihenfolge, in der die Datei gespeichert
+wird: Großbuchstaben kommen vor Kleinbuchstaben, und Zahlen in Symbolen werden nach ihrem Wert verglichen (<code>item2</code> vor
+<code>item10</code>). Zeilen ohne Symbol kommen ans Ende.</p>
+
+<p>Da die Datei ohnehin immer in dieser Reihenfolge gespeichert wird, gilt das Sortieren nicht als Änderung.</p>
+
+<h2>Importieren</h2>
+
+<p><span class="menu">Extras › Importieren...</span> übernimmt die Einträge einer anderen Sprachtabelle, deren Symbole in der
+aktuellen Tabelle fehlen. Damit können Sie</p>
+
+<ul>
+	<li>eine neue Sprache beginnen: Legen Sie eine leere Tabelle an, importieren Sie die Tabelle einer vorhandenen Sprache und
+		übersetzen Sie dann die Texte;</li>
+	<li>eine Übersetzung auf den neuesten Stand bringen: Importieren Sie die Tabelle der Ausgangssprache, um alle Einträge zu
+		bekommen, die inzwischen dazugekommen sind.</li>
+</ul>
+
+<p>Importierte Zeilen werden mit den Texten der anderen Tabelle am Ende angefügt und markiert, damit Sie sehen, was neu ist.
+Vorhandene Zeilen und der Kopf werden nie verändert. Fehlt nichts, teilt Ihnen der Editor das mit.</p>
+			<div class="pager">
+				<a class="prev" href="find.html"><small>Zurück</small>Suchen und Ersetzen</a>
+				<a class="next" href="definitions.html"><small>Weiter</small>Sprachdefinitionen</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿cid = lang.def;
+version = 3.0;
+
+header
+{
+    author = robbiblubber.org;
+    key = lt.spellbook.themeselector;
+    lang = en;
+    name = spellbook.themeselector.en;
+    prefixes = spellbook;
+    version = 1.0;
+}
+
+data
+{
+    themeselector.automatic = Automatic;
+    themeselector.customize = Customize...;
+    themeselector.dark = Dark;
+    themeselector.light = Light;
+    themeselector.system = System;
+}

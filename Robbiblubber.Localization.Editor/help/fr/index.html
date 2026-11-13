@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Localization Editor – Aide de Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Aide de Localization Editor</a>
+		<div class="languages"><a href="../en/index.html" hreflang="en" lang="en" title="English">en</a> <a href="../de/index.html" hreflang="de" lang="de" title="Deutsch">de</a> <span title="Français">fr</span> <a href="../id/index.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Sommaire</h2>
+			<ul>
+				<li><a href="index.html" class="current">Accueil</a></li>
+				<li><a href="concepts.html">Notions de base</a></li>
+				<li><a href="windows.html">Fichiers et fenêtres</a></li>
+				<li><a href="tables.html">Tables de langue</a></li>
+				<li><a href="editing.html">Édition et presse-papiers</a></li>
+				<li><a href="find.html">Rechercher et remplacer</a></li>
+				<li><a href="tools.html">Outils</a></li>
+				<li><a href="definitions.html">Définitions de langue</a></li>
+				<li><a href="settings.html">Paramètres</a></li>
+				<li><a href="shortcuts.html">Raccourcis clavier</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Localization Editor</h1>
+
+<p class="lead">Localization Editor crée et modifie les fichiers qui permettent à une application de parler plusieurs langues : les
+<strong>tables de langue</strong>, qui contiennent les textes d'une langue, et les <strong>définitions de langue</strong>, qui
+décrivent une langue avec son nom et ses icônes.</p>
+
+<h2>Premiers pas</h2>
+
+<ol class="steps">
+	<li>Au démarrage, l'éditeur affiche une table de langue vide. Vous pouvez créer d'autres tables à tout moment avec
+		<span class="menu">Fichier › Nouveau › Table</span> (<kbd>Ctrl</kbd>+<kbd>N</kbd>).</li>
+	<li>Remplissez l'en-tête : indiquez la langue dans <span class="ui">Langue</span> (par exemple <code>de</code>) et les
+		<span class="ui">Préfixes</span> utilisés par votre application (par exemple <code>app</code>).</li>
+	<li>Saisissez un texte par ligne : le <span class="ui">Symbole</span> est le nom que votre application utilise pour ce texte
+		(par exemple <code>menu.file.open</code>), le <span class="ui">Texte</span> est ce que voit l'utilisateur (par exemple
+		<code>&amp;Öffnen...</code>). Cliquez sur la dernière ligne, vide, pour ajouter une entrée.</li>
+	<li>Enregistrez la table avec <span class="menu">Fichier › Enregistrer</span> (<kbd>Ctrl</kbd>+<kbd>S</kbd>). L'éditeur propose
+		un nom de fichier tel que <code>app.de.ltab</code>.</li>
+	<li>Pour une autre langue, créez une nouvelle table, indiquez sa langue et copiez-y toutes les entrées de la première table avec
+		<span class="menu">Outils › Importer...</span>. Traduisez ensuite les textes ligne par ligne.</li>
+</ol>
+
+<div class="tip">
+	<p>Appuyez sur <kbd>F1</kbd> dans n'importe quelle fenêtre de l'éditeur pour ouvrir la page d'aide correspondante.</p>
+</div>
+
+<h2>Rubriques</h2>
+
+<div class="cards">
+	<a href="concepts.html"><strong>Notions de base</strong><span>Langues, tables de langue, symboles, préfixes et espaces
+		réservés.</span></a>
+	<a href="windows.html"><strong>Fichiers et fenêtres</strong><span>Créer, ouvrir, enregistrer et fermer ; fichiers récents et
+		menu Fenêtre.</span></a>
+	<a href="tables.html"><strong>Tables de langue</strong><span>Champs de l'en-tête, entrées, caractères spéciaux et
+		problèmes.</span></a>
+	<a href="editing.html"><strong>Édition et presse-papiers</strong><span>Commandes d'édition, menus contextuels, copier depuis et
+		vers Excel.</span></a>
+	<a href="find.html"><strong>Rechercher et remplacer</strong><span>Rechercher des symboles et des textes, remplacer, expressions
+		régulières.</span></a>
+	<a href="tools.html"><strong>Outils</strong><span>Éditeur de texte pour les textes longs, tri et importation
+		d'entrées.</span></a>
+	<a href="definitions.html"><strong>Définitions de langue</strong><span>Clé, langue de base, nom et icônes d'une
+		langue.</span></a>
+	<a href="settings.html"><strong>Paramètres</strong><span>Langue et thème de l'éditeur, langues supplémentaires et paramètres
+		enregistrés.</span></a>
+	<a href="shortcuts.html"><strong>Raccourcis clavier</strong><span>Tous les raccourcis en un coup d'œil.</span></a>
+</div>
+
+<h2>Types de fichiers</h2>
+
+<table>
+	<tr><th>Extension</th><th>Contenu</th></tr>
+	<tr><td><code>.ltab</code></td><td>Table de langue : les textes d'une langue, sous forme de texte lisible.</td></tr>
+	<tr><td><code>.cltab</code></td><td>Table de langue compressée : le même contenu, mais plus compact et illisible en tant que
+		texte.</td></tr>
+	<tr><td><code>.locale</code></td><td>Définition de langue : clé, nom, langue de base et icônes d'une langue.</td></tr>
+</table>
+			<div class="pager">
+				<a class="next" href="concepts.html"><small>Suivant</small>Notions de base</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>

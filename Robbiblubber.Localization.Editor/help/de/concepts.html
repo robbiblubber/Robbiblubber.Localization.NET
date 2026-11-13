@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Grundlagen – Hilfe zum Localization Editor</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="top">
+		<a class="title" href="index.html">Hilfe zum Localization Editor</a>
+		<div class="languages"><a href="../en/concepts.html" hreflang="en" lang="en" title="English">en</a> <span title="Deutsch">de</span> <a href="../fr/concepts.html" hreflang="fr" lang="fr" title="Français">fr</a> <a href="../id/concepts.html" hreflang="id" lang="id" title="Bahasa Indonesia">id</a></div>
+	</header>
+	<div class="page">
+		<nav>
+			<h2>Inhalt</h2>
+			<ul>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="concepts.html" class="current">Grundlagen</a></li>
+				<li><a href="windows.html">Dateien und Fenster</a></li>
+				<li><a href="tables.html">Sprachtabellen</a></li>
+				<li><a href="editing.html">Bearbeiten und Zwischenablage</a></li>
+				<li><a href="find.html">Suchen und Ersetzen</a></li>
+				<li><a href="tools.html">Extras</a></li>
+				<li><a href="definitions.html">Sprachdefinitionen</a></li>
+				<li><a href="settings.html">Einstellungen</a></li>
+				<li><a href="shortcuts.html">Tastenkürzel</a></li>
+			</ul>
+		</nav>
+		<main>
+<h1>Grundlagen</h1>
+
+<p class="lead">Diese Seite erklärt, wie eine Anwendung ihre Texte findet und was das für die Dateien bedeutet, die Sie
+bearbeiten.</p>
+
+<h2>Sprachen</h2>
+
+<p>Eine <strong>Sprache</strong> (im Englischen „Locale“) kann auch für eine Region gelten. Jede Sprache hat einen kurzen
+<strong>Schlüssel</strong>, zum Beispiel <code>en</code> für Englisch, <code>de</code> für Deutsch oder <code>de-AT</code> für
+Deutsch in Österreich. Eine <strong>Sprachdefinition</strong> (<code>.locale</code>) beschreibt eine Sprache: ihren Schlüssel, den
+Namen, den der Benutzer sieht, ihre Icons und ein paar Einstellungen. Siehe <a href="definitions.html">Sprachdefinitionen</a>.</p>
+
+<p>Eine Sprache kann eine <strong>Basissprache</strong> haben. Eine Sprache <code>de-AT</code> mit der Basis <code>de</code> braucht
+nur die Texte, die in Österreich anders lauten; alle anderen Texte kommen aus <code>de</code>.</p>
+
+<h2>Sprachtabellen</h2>
+
+<p>Eine <strong>Sprachtabelle</strong> (<code>.ltab</code> oder <code>.cltab</code>) enthält die Texte einer Sprache für eine
+Anwendung oder einen Teil davon. Das Feld <span class="ui">Sprache</span> im Kopf der Tabelle gibt an, zu welcher Sprache die
+Texte gehören. Meist hat eine Anwendung eine Tabelle pro Sprache, zum Beispiel <code>app.en.ltab</code>, <code>app.de.ltab</code>
+und <code>app.fr.ltab</code>, jeweils mit denselben Symbolen.</p>
+
+<h2>Symbole und Texte</h2>
+
+<p>Jeder Eintrag einer Tabelle hat ein <strong>Symbol</strong> und einen <strong>Text</strong>. Das Symbol ist der Name, unter dem
+die Anwendung einen Text abruft; es ist in allen Sprachen gleich. Der Text ist die Übersetzung. Symbole bestehen meist aus Wörtern,
+die durch Punkte getrennt sind, zum Beispiel <code>menu.file.open</code> oder <code>message.saved</code>. Groß- und Kleinschreibung
+zählen: <code>Save</code> und <code>save</code> sind zwei verschiedene Symbole.</p>
+
+<h2>Präfixe</h2>
+
+<p>Das <strong>Präfix</strong> hält die Symbole verschiedener Anwendungen oder Komponenten auseinander. Die Anwendung fragt einen
+Text als <code>präfix:symbol</code> ab, zum Beispiel <code>app:menu.file.open</code>. In der Tabelle geben Sie nur das Symbol ein
+(<code>menu.file.open</code>) und das Präfix einmal im Kopf. Eine Tabelle mit mehreren Präfixen stellt ihre Symbole unter jedem
+davon bereit; eine Tabelle ohne Präfix stellt sie so bereit, wie sie sind.</p>
+
+<div class="note">
+	<p>Schreiben Sie das Präfix nicht vor die Symbole in der Tabelle. Der Editor markiert solche Zeilen als Problem, weil die
+	Tabelle ihr Präfix ohnehin davorsetzt.</p>
+</div>
+
+<h2>Platzhalter</h2>
+
+<p>Texte können Platzhalter enthalten: ein <code>$</code> gefolgt von einem Namen in Großbuchstaben, zum Beispiel
+<code>$NAME</code> in <code>$NAME wurde gespeichert.</code> Die Anwendung ersetzt sie durch einen Wert. Lassen Sie Platzhalter beim
+Übersetzen unverändert; Sie dürfen sie aber an eine andere Stelle im Satz verschieben.</p>
+
+<h2>Zugriffstasten</h2>
+
+<p>In Texten für Menüs, Schaltflächen und Beschriftungen markiert ein <code>&amp;</code> den Buchstaben, der unterstrichen wird und
+mit <kbd>Alt</kbd> ausgewählt werden kann, zum Beispiel <code>&amp;Öffnen...</code>. Innerhalb eines Menüs oder Fensters sollte
+jeder Buchstabe nur einmal vorkommen. Für ein <code>&amp;</code> selbst schreiben Sie <code>&amp;&amp;</code>.</p>
+
+<h2>Wenn ein Text fehlt</h2>
+
+<p>Enthält die Tabelle der aktuellen Sprache ein Symbol nicht, verwendet die Anwendung den Text der Basissprache oder einen in die
+Anwendung eingebauten Text, meist den englischen. Ein fehlender Eintrag führt also zu keinem Fehler, aber der Benutzer sieht einen
+nicht übersetzten Text.</p>
+
+<p>Kommt dasselbe Symbol für dieselbe Sprache zweimal vor, gilt das spätere. Der Editor warnt Sie vor solchen doppelten Einträgen,
+sowohl in der Tabelle als auch beim Öffnen einer Datei.</p>
+			<div class="pager">
+				<a class="prev" href="index.html"><small>Zurück</small>Start</a>
+				<a class="next" href="windows.html"><small>Weiter</small>Dateien und Fenster</a>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
